@@ -1,6 +1,7 @@
 @import "global";
 @import "vars";
 @import "fonts";
+@import "dropdown";
 
 .header__top {
   background-color: $bg;
@@ -14,6 +15,7 @@
 }
 
 .header__info {
+  position: relative;
   display: flex;
   align-items: center;
 
@@ -29,7 +31,6 @@
     color: #fff;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
     background-color: $btn;
-   
   }
   &-icon {
     display: flex;
@@ -56,26 +57,6 @@
       color: #fff;
     }
   }
-  &-user {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 22px;
-  }
-  &-name {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-    color: #333;
-  }
-  &-purse {
-    font-size: 15px;
-    font-weight: 400;
-    color: $btn;
-  }
 }
 
 .header__info-link--color-pink::after {
@@ -88,7 +69,7 @@
 }
 
 .header__info-link--color-green::after {
-  content: "6";
+  content: "2";
   background-color: #62d03b;
 }
 
@@ -97,6 +78,35 @@
   bottom: 15px;
   background-color: #0674ec;
 }
+
+
+.header__user {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 22px;
+}
+
+.header__profile {
+  &-name {
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333;
+  }
+  &-purse {
+    font-size: 15px;
+    font-weight: 400;
+    color: $btn;
+  }
+  
+}
+
+
 
 .header__bottom-inner {
   display: flex;
@@ -108,10 +118,12 @@
 
 .header__menu {
   &-item {
+    position: relative;
     display: flex;
     padding: 0;
   }
   &-list {
+    padding-bottom: 60px;
     & + .header__menu-list {
       margin-left: 34px;
     }
@@ -124,6 +136,8 @@
     color: $text;
   }
 }
+
+
 
 .header__form {
   position: relative;
@@ -146,7 +160,13 @@
     right: -1px;
     background-color: $btn;
     width: 70px;
-    height: 46px;
+    height: 45px;
+    border: none;
     border-radius: 36px;
   }
+}
+
+
+.dropdown-menu--wordpress {
+  left: 215px;
 }
