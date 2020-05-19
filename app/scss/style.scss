@@ -79,7 +79,6 @@
   background-color: #0674ec;
 }
 
-
 .header__user {
   width: 50px;
   height: 50px;
@@ -103,10 +102,7 @@
     font-weight: 400;
     color: $btn;
   }
-  
 }
-
-
 
 .header__bottom-inner {
   display: flex;
@@ -123,7 +119,6 @@
     padding: 0;
   }
   &-list {
-    padding-bottom: 60px;
     & + .header__menu-list {
       margin-left: 34px;
     }
@@ -136,8 +131,6 @@
     color: $text;
   }
 }
-
-
 
 .header__form {
   position: relative;
@@ -166,7 +159,88 @@
   }
 }
 
-
 .dropdown-menu--wordpress {
   left: 215px;
+}
+
+.marketplace {
+  padding: 150px 0 200px;
+  background-color: #294dcf;
+  &__inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: #f3f3f8;
+  }
+  &__title {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  &__text {
+    display: block;
+    font-weight: 400;
+  }
+  &__descr {
+    margin-bottom: 70px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+  &__btn {
+    width: 190px;
+    padding: 17px 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 28px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #fff;
+    & + .marketplace__btn {
+      margin-left: 30px;
+    }
+    &--active {
+      background-color: #fff;
+      color: $btn;
+    }
+  }
+}
+
+.proposal {
+  padding: 227px 0 121px;
+  background-color: #fff;
+  &__inner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  &__card {
+    max-width: 361px;
+    width: 100%;
+    padding: 41px 35px 49px;
+    transition: box-shadow 1s;
+    &:hover,
+    &--active {
+      box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+    }
+    & + .proposal__card {
+      margin-left: 29px;
+    }
+    &-img {
+      width: 113px;
+      object-fit: cover;
+      margin-bottom: 38px;
+    }
+    &-title {
+      font-size: 24px;
+      color: #000000;
+      margin-bottom: 34px;
+    }
+    &-descr {
+      font-size: 16px;
+      line-height: 30px;
+      color: #555555;
+    }
+  }
 }
