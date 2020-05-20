@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-  max-width: 1470px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -39,4 +39,90 @@ body {
   border-radius: 4px;
   color: #000;
   background-color: #fff;
+}
+
+.user {
+  display: inline-block;
+  position: relative;
+  margin-right: 21px;
+  padding-left: 39px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #000;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $wp-bg;
+  }
+}
+
+.platform {
+  position: relative;
+  padding-left: 25px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  color: $wp-bg;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/icon/wordpress-img-1.svg);
+  }
+}
+
+.btn-buy {
+  padding: 8px 17px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 15px;
+  border: none;
+  color: $btn;
+  cursor: pointer;
+  background-color: rgba($btn, 0.1);
+}
+
+.btn-like {
+  position: relative;
+  padding: 0 0 0 26px;
+  line-height: 0;
+  font-size: 15px;
+  border: none;
+  background-color: transparent;
+  color: $descr;
+  cursor: pointer;
+  .product__buy-icon path {
+    fill: $wp-bg;
+  }
+}
+
+.btn-basket {
+  position: relative;
+  padding-left: 23px;
+  font-size: 15px;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  color: $btn;
+  cursor: pointer;
+  .product__buy-icon path {
+    fill: $btn;
+  }
+}
+
+.btn-icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 7px;
+  left: 0;
 }
