@@ -1181,3 +1181,44 @@
 }
 // end
 // blog
+// start
+//          money-support
+.money-support {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__line {
+    width: 1px;
+    height: 297px;
+    background-color: #e8eaf3;
+  }
+}
+
+.money-support__row {
+  max-width: 375px;
+  width: 100%;
+  padding: 62px 0;
+  text-align: center;
+  &-img {
+    display: block;
+    width: 150px;
+    height: 120px;
+    margin: 0 auto;
+    object-fit: cover;
+    margin-bottom: 31px;
+  }
+  &-text {
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    &--blue {
+      color: $btn;
+    }
+    &--violet {
+     color: $wp-bg; 
+    }
+  }
+}
+// end
+//          money-support
