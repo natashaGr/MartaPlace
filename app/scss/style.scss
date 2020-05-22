@@ -364,13 +364,16 @@
     position: relative;
     margin-bottom: 50px;
   }
-  &__img {
+  &__images {
     position: relative;
+    width: 555px;
+    height: 455px;
+  }
+  &__img {
     display: block;
     max-width: 555px;
-    height: 488px;
+    height: 455px;
   }
-
   &__bg {
     position: absolute;
     display: block;
@@ -417,7 +420,7 @@
 
 .product-slider__info {
   max-width: 586px;
-  padding: 50px 50px 34px;
+  padding: 50px 50px 24px;
   background-color: #fff;
   &-title {
     margin-bottom: 15px;
@@ -426,9 +429,8 @@
     color: #000;
   }
   &-descr {
-    margin-top: 35px;
+    margin-top: 25px;
     font-size: 16px;
-    font-weight: 400;
     line-height: 30px;
     color: $descr;
   }
@@ -436,7 +438,7 @@
 
 .product-slider__categories {
   display: flex;
-  margin: 40px 0 44px;
+  margin: 30px 0 45px;
   padding: 0;
   &-list {
     & + .product-slider__categories-list {
@@ -601,9 +603,6 @@
     & + .product__categories-btn {
       margin-left: 10px;
     }
-    // &:focus {
-    //   outline: 1px solid $link-d;
-    // }
     &--active,
     &:hover,
     &:active {
@@ -635,7 +634,6 @@
     height: 230px;
     object-fit: cover;
   }
-
   &-info {
     padding: 30px 34px 34px;
   }
@@ -695,7 +693,13 @@
     }
     &--like {
       margin-right: auto;
+      position: relative;
     }
+  }
+  &-star {
+    position: absolute;
+    right: 111px;
+    bottom: 26px;
   }
 }
 // end
@@ -931,3 +935,53 @@
 }
 // end
 //          choose-people
+
+//  start
+//          sell-buy
+.sell-buy {
+  padding-bottom: 120px;
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    max-width: 50%;
+    width: 100%;
+    min-height: 561px;
+    padding: 100px 0;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__img {
+    margin-bottom: 49px;
+  }
+  &__title {
+    margin-bottom: 34px;
+    font-size: 36px;
+    color: #fff;
+  }
+  &__descr {
+    max-width: 600px;
+    margin: 0 auto 49px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  &__btn {
+    padding: 21px 27px;
+    font-size: 16px;
+    color: $btn;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 28px;
+    background-color: #fff;
+    &--violet {
+      padding: 20px 40px 19px ;
+      color: $wp-bg;
+    }
+  }
+}
+
+//  end
+//          sell-buy
