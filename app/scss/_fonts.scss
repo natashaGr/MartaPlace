@@ -1,31 +1,76 @@
 @font-face {
-    font-family: 'Quicksand';
-    src: url('../fonts/Quicksand-Light.woff2') format('woff2'),
-        url('../fonts/Quicksand-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Light.woff2") format("woff2"), url("../fonts/Quicksand-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Quicksand';
-    src: url('../fonts/Quicksand-Regular.woff2') format('woff2'),
-        url('../fonts/Quicksand-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Regular.woff2") format("woff2"), url("../fonts/Quicksand-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Quicksand';
-    src: url('../fonts/Quicksand-Medium.woff2') format('woff2'),
-        url('../fonts/Quicksand-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Medium.woff2") format("woff2"), url("../fonts/Quicksand-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Quicksand';
-    src: url('../fonts/Quicksand-Bold.woff2') format('woff2'),
-        url('../fonts/Quicksand-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Bold.woff2") format("woff2"), url("../fonts/Quicksand-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?yyebsz");
+  src: url("../fonts/icomoon.eot?yyebsz#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?yyebsz") format("truetype"), url("fonts/icomoon.woff?yyebsz") format("woff"),
+    url("../fonts/icomoon.svg?yyebsz#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+.icon-pinterest:before {
+  content: "\f0d2";
+}
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+.icon-dribbble:before {
+  content: "\f17d";
+}
+.icon-google1:before {
+  content: "\f1a0";
 }
