@@ -328,7 +328,7 @@
   &__card {
     max-width: 361px;
     width: 100%;
-    padding: 41px 35px 49px;
+    padding: 41px 30px 49px;
     cursor: pointer;
     transition: box-shadow 1s;
     &:hover,
@@ -342,12 +342,12 @@
     &-img {
       width: 113px;
       object-fit: cover;
-      margin-bottom: 38px;
+      margin-bottom: 27px;
     }
     &-title {
       font-size: 24px;
       color: #000000;
-      margin-bottom: 34px;
+      margin-bottom: 21px;
     }
     &-descr {
       font-size: 16px;
@@ -384,7 +384,7 @@
   &__bg {
     position: absolute;
     display: block;
-    top: 45px;
+    top: 35px;
     right: 29px;
     width: 110px;
     height: 45px;
@@ -406,37 +406,42 @@
 
   .slick-arrows {
     position: absolute;
-    top: -132px;
+    top: -116px;
     right: 0;
     border: none;
     background-color: transparent;
     outline: transparent;
     cursor: pointer;
-    svg path {
-      fill: #fff;
+    svg {
+      width: 14px;
+      height: 14px;
+      path {
+        fill: #fff;
+      }
     }
   }
   .arrows-prev {
     z-index: 3;
-    right: 86px;
+    right: 99px;
   }
   .arrows-next {
-    right: 43px;
+    right: 46px;
   }
 }
 
 .product-slider__info {
   max-width: 586px;
-  padding: 50px 50px 24px;
+  height: 455px;
+  padding: 45px 50px 24px;
   background-color: #fff;
   &-title {
-    margin-bottom: 15px;
+    margin-bottom: 17px;
     font-size: 24px;
     font-weight: 500;
     color: #000;
   }
   &-descr {
-    margin-top: 25px;
+    margin-top: 27px;
     font-size: 16px;
     line-height: 30px;
     color: $descr;
@@ -464,14 +469,14 @@
 
 .product-slider__buy {
   position: relative;
-  padding-top: 23px;
+  padding-top: 21px;
   border-top: 1px solid #ececec;
   display: flex;
   align-items: center;
   &-btn {
     width: 100px;
     margin-right: 9px;
-    padding: 9px 0;
+    padding: 7px 0;
     color: #ffffff;
     border: none;
     font-size: 15px;
@@ -481,7 +486,7 @@
   }
   &-like {
     position: relative;
-    padding-left: 26px;
+    padding-left: 37px;
     font-size: 15px;
     border: none;
     background-color: transparent;
@@ -492,7 +497,7 @@
   }
   &-bag {
     position: relative;
-    padding-left: 23px;
+    padding-left: 36px;
     font-size: 15px;
     font-weight: 400;
     border: none;
@@ -507,7 +512,7 @@
     width: 16px;
     height: 16px;
     top: 0;
-    left: 0;
+    left: 13px;
   }
   &-star {
     display: inline-block;
@@ -527,7 +532,7 @@
   &__title {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
     &-filter {
       position: relative;
       margin-right: 30px;
@@ -578,8 +583,8 @@
 .product__filter {
   text-align: center;
   &-btn {
-    margin-top: 59px;
-    padding: 21px 31px;
+    margin-top: 26px;
+    padding: 20px 31px;
     color: #ffffff;
     font-size: 16px;
     border-radius: 28px;
@@ -600,7 +605,7 @@
   background-color: #fff;
   margin-bottom: 51px;
   &-btn {
-    padding: 10px 20px 8px 21px;
+    padding: 8px 20px 8px 21px;
     font-size: 15px;
     font-weight: 500;
     border-radius: 16px;
@@ -608,7 +613,7 @@
     border: none;
     color: $color-t;
     & + .product__categories-btn {
-      margin-left: 10px;
+      margin-left: 6px;
     }
     &--active,
     &:hover,
@@ -642,16 +647,16 @@
     object-fit: cover;
   }
   &-info {
-    padding: 30px 34px 34px;
+    padding: 27px 30px 25px;
   }
   &-title {
     font-size: 20px;
     font-weight: 500;
     color: #000;
-    margin-bottom: 17px;
+    margin-bottom: 13px;
   }
   &-descr {
-    margin-top: 33px;
+    margin-top: 27px;
     font-size: 16px;
     line-height: 30px;
     color: $descr;
@@ -669,7 +674,7 @@
   overflow: hidden;
   transition: background-image 1s, opacity 1s, height 1s;
   &-btn {
-    padding: 17px 32px;
+    padding: 13px 28px;
     font-size: 15px;
     font-weight: 500;
     border: 1px solid #f4f4f4;
@@ -678,7 +683,7 @@
     color: #fff;
     transition: background-color 0.5s, color 0.5s;
     & + .product__blackout-btn {
-      margin-left: 11px;
+      margin-left: 16px;
     }
     &--active,
     &:hover,
@@ -690,7 +695,7 @@
 }
 
 .product__buy {
-  padding: 15px 30px 16px;
+  padding: 15px 25px 16px 30px;
   border-top: 1px solid #ececec;
   display: flex;
   justify-content: space-between;
@@ -705,7 +710,7 @@
   }
   &-star {
     position: absolute;
-    right: 111px;
+    right: 100px;
     bottom: 26px;
   }
 }
@@ -718,13 +723,10 @@
 .followers-slider {
   padding: 120px 0;
   background-color: $bg2;
-  &__title {
-  }
-
   &__bg {
     position: absolute;
     display: block;
-    top: 45px;
+    top: 34px;
     right: 29px;
     width: 110px;
     height: 45px;
@@ -733,28 +735,30 @@
   }
   .slick-arrows {
     position: absolute;
-    top: -132px;
+    top: -116px;
     right: 0;
     border: none;
     background-color: transparent;
     outline: transparent;
     cursor: pointer;
-    svg path {
-      fill: #fff;
+    svg {
+      width: 14px;
+      height: 14px;
+      path {
+        fill: #fff;
+      }
     }
   }
   .arrows-prev {
     z-index: 3;
-    right: 86px;
+    right: 99px;
   }
   .arrows-next {
-    right: 43px;
+    right: 46px;
   }
 }
-
 // end
 //          followers-slider
-
 // start
 //          fun-fact
 .fun-fact {
@@ -763,11 +767,11 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
-    padding: 98px 0;
+    padding: 95px 0;
   }
   &__icon {
-    width: 48px;
-    height: 41px;
+    width: 55px;
+    height: 46px;
     &--yellow {
       path {
         fill: #feb71d;
@@ -792,14 +796,18 @@
 }
 
 .fun-fact__card {
-  max-width: 150px;
+  max-width: 124px;
   width: 100%;
+  &--usser {
+    max-width: 94px;
+    width: 100%;
+  }
   &-img {
-    margin-bottom: 52px;
+    margin-bottom: 37px;
   }
   &-number {
     font-size: 36px;
-    margin-bottom: 18px;
+    margin-bottom: 11px;
     &--yellow {
       color: #feb71d;
     }
@@ -826,10 +834,10 @@
 .choose-people {
   padding: 120px 0;
   &__title {
-    margin-bottom: 29px;
+    margin-bottom: 21px;
   }
   &__text {
-    margin-bottom: 60px;
+    margin-bottom: 25px;
   }
   &__inner {
     display: flex;
@@ -837,8 +845,8 @@
     flex-wrap: wrap;
   }
   &__icon {
-    width: 60px;
-    height: 48px;
+    width: 80px;
+    height: 55px;
     &--blue {
       path {
         fill: $btn;
@@ -880,7 +888,7 @@
   box-shadow: 0 2px 50px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
   background-color: #fff;
-  margin-top: 30px;
+  margin-top: 24px;
   text-align: center;
   &--nuber-one::before,
   &--nuber-two::before,
@@ -916,12 +924,12 @@
 
 .choose-people__card {
   &-img {
-    margin-bottom: 53px;
+    margin-bottom: 39px;
   }
   &-title {
     font-size: 24px;
     color: #000;
-    margin-bottom: 29px;
+    margin-bottom: 23px;
   }
   &-descr {
     font-size: 16px;
@@ -951,22 +959,22 @@
     background-size: cover;
   }
   &__img {
-    margin-bottom: 49px;
+    margin-bottom: 43px;
   }
   &__title {
-    margin-bottom: 34px;
+    margin-bottom: 21px;
     font-size: 36px;
     color: #fff;
   }
   &__descr {
     max-width: 600px;
-    margin: 0 auto 49px;
+    margin: 0 auto 58px;
     color: #ffffff;
     font-size: 16px;
     line-height: 30px;
   }
   &__btn {
-    padding: 21px 27px;
+    padding: 17px 27px;
     font-size: 16px;
     color: $btn;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -985,7 +993,7 @@
 .feedback {
   padding-bottom: 120px;
   &__title {
-    margin-bottom: 36px;
+    margin-bottom: 21px;
   }
   &__text {
     margin-bottom: 60px;
@@ -1037,7 +1045,7 @@
   &-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 29px;
+    margin-bottom: 15px;
   }
   &-user {
     display: flex;
@@ -1050,19 +1058,20 @@
     margin-right: 19px;
   }
   &-name {
-    margin: 15px 0 14px;
+    margin: 6px 0 14px;
     font-size: 20px;
     color: #000;
   }
   &-position {
     display: block;
+    margin-top: 10px;
     font-size: 16px;
     color: $descr;
   }
   &-icon {
-    width: 57px;
-    height: 51px;
-    margin-top: 6px;
+    width: 67px;
+    height: 61px;
+    margin-top: -9px;
     path {
       fill: #e8e8e8;
     }
@@ -1078,7 +1087,7 @@
   text-align: center;
   &-link {
     display: inline-block;
-    padding: 21px 31px;
+    padding: 17px 34px;
     font-size: 16px;
     color: #fff;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1095,10 +1104,10 @@
   background-color: #eff1f5;
   padding: 120px 0;
   &__title {
-    margin-bottom: 36px;
+    margin-bottom: 20px;
   }
   &__text {
-    margin-bottom: 60px;
+    margin-bottom: 54px;
   }
   &__inner {
     display: flex;
@@ -1120,15 +1129,15 @@
     background-size: cover;
   }
   &-info {
-    height: 204px;
-    padding: 30px 29px;
+    min-height: 184px;
+    padding: 26px 26px 0 26px;
     min-height: 186px;
   }
   &-title {
     font-size: 22px;
     font-weight: 500;
     color: #000;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   &-descr {
     font-size: 16px;
@@ -1140,11 +1149,11 @@
 .blog__footer {
   min-height: 58px;
   display: flex;
-  padding: 10px 30px 8px;
+  padding: 10px 22px 13px 30px;
   border-top: 1px solid #ececec;
   &-time {
     position: relative;
-    padding-top: 13px;
+    padding-top: 8px;
     margin-right: auto;
     padding-left: 24px;
     padding-right: 47px;
@@ -1154,7 +1163,7 @@
   }
   &-icon {
     position: absolute;
-    top: 13px;
+    top: 8px;
     left: 0;
     width: 16px;
     height: 15px;
@@ -1175,7 +1184,7 @@
     background-color: transparent;
     color: #7e7e7e;
     & + .blog__footer-btn {
-      margin-left: 25px;
+      margin-left: 24px;
     }
   }
 }
@@ -1196,7 +1205,7 @@
 }
 
 .money-support__row {
-  max-width: 375px;
+  max-width: 579px;
   width: 100%;
   padding: 62px 0;
   text-align: center;
@@ -1225,13 +1234,13 @@
 // start
 //          banner
 .banner {
-  padding: 110px 0;
+  padding: 105px 0;
   text-align: center;
   background-color: #151a20;
   background-image: linear-gradient(to left, #0d3ef2 0%, #7221a0 100%);
   opacity: 0.9;
   &__slogan {
-    margin-bottom: 23px;
+    margin-bottom: 19px;
     font-size: 36px;
     color: #fff;
   }
