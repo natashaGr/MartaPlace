@@ -19,8 +19,8 @@
             <div class="container">
                 <div class="header__top-inner">
                     <div class="header__logo">
-                        <a href="#">
-                            <img src="images/logo.png" alt="logo">
+                        <a class="header__logo-link" href="#">
+                            <img class="logo" src="images/logo.png" alt="logo">
                         </a>
                     </div>
                     <div class="header__info">
@@ -514,15 +514,9 @@
             <div class="container">
                 <form class="search-form__form">
                     <input type="search" class="search-form__input" placeholder="Search your products...">
-                    <button class="search-form__option" type="submit">
-                        All Categories
-                        <svg class="search-form__icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
-                            <path fill="#000000"
-                                d="M0 6c0-0.128 0.049-0.256 0.146-0.354 0.195-0.195 0.512-0.195 0.707 0l8.646 8.646 8.646-8.646c0.195-0.195 0.512-0.195 0.707 0s0.195 0.512 0 0.707l-9 9c-0.195 0.195-0.512 0.195-0.707 0l-9-9c-0.098-0.098-0.146-0.226-0.146-0.354z">
-                            </path>
-                        </svg>
-                    </button>
+                    <select class="search-form__option" type="submit">
+                        <option value="">All Categories</option>
+                    </select>
                     <button class="search-form__btn" type="submit">
                         Search Now
                     </button>
@@ -542,11 +536,11 @@
                         <div class="proposal__card-title">
                             Best UX Research
                         </div>
-                        <div class="proposal__card-descr">
+                        <p class="proposal__card-descr">
                             Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                             the mattis, leo quam aliquet diam
                             congue is laoreet elit metus.
-                        </div>
+                        </p>
                     </article>
                     <article class="proposal__card proposal__card--active">
                         <img class="proposal__card-img" src="images/content/proposal-card-img-2.png"
@@ -554,11 +548,11 @@
                         <div class="proposal__card-title">
                             Fully Responsive
                         </div>
-                        <div class="proposal__card-descr">
+                        <p class="proposal__card-descr">
                             Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                             the mattis, leo quam aliquet diam
                             congue is laoreet elit metus.
-                        </div>
+                        </p>
                     </article>
                     <article class="proposal__card">
                         <img class="proposal__card-img" src="images/content/proposal-card-img-3.png"
@@ -566,11 +560,11 @@
                         <div class="proposal__card-title">
                             Buy & Sell Easily
                         </div>
-                        <div class="proposal__card-descr">
+                        <p class="proposal__card-descr">
                             Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                             the mattis, leo quam aliquet diam
                             congue is laoreet elit metus.
-                        </div>
+                        </p>
                     </article>
                 </div>
             </div>
@@ -600,11 +594,10 @@
                                     </a>
                                 </div>
                             </div>
-
                             <div class="product-slider__info">
-                                <div class="product-slider__info-title">
+                                <a class="product-slider__info-title" href="#">
                                     One Page Resume Template
-                                </div>
+                                </a>
                                 <a class="product-slider__info-link user" href="#">
                                     AazzTech
                                 </a>
@@ -620,13 +613,13 @@
                                         </g>
                                     </svg>
                                 </a>
-                                <div class="product-slider__info-descr">
+                                <p class="product-slider__info-descr">
                                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                                     the
                                     mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent
                                     pharetra,
                                     justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
-                                </div>
+                                </p>
                                 <ul class="product-slider__categories">
                                     <li class="product-slider__categories-list">
                                         <a class="product-slider__categories-link" href="#">
@@ -699,22 +692,22 @@
                             </div>
 
                             <div class="product-slider__info">
-                                <div class="product-slider__info-title">
+                                <a class="product-slider__info-title" href="#">
                                     One Page Resume Template
-                                </div>
+                                </a>
                                 <a class="product-slider__info-link user" href="#">
                                     AazzTech
                                 </a>
                                 <a class="product-slider__info-link platform" href="#">
                                     WordPress
                                 </a>
-                                <div class="product-slider__info-descr">
+                                <p class="product-slider__info-descr">
                                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                                     the
                                     mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent
                                     pharetra,
                                     justo ut scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
-                                </div>
+                                </p>
                                 <ul class="product-slider__categories">
                                     <li class="product-slider__categories-list">
                                         <a class="product-slider__categories-link" href="#">
@@ -847,9 +840,9 @@
                             </div>
                         </div>
                         <div class="product__cart-info">
-                            <div class="product__cart-title">
+                            <a class="product__cart-title" href="#">
                                 E-commerce Shopping Cart
-                            </div>
+                            </a>
                             <a href="#" class="product__cart-navigation product__cart-navigation--user user">
                                 Theme-Valley
                             </a>
@@ -865,10 +858,10 @@
                                     </g>
                                 </svg>
                             </a>
-                            <div class="product__cart-descr">
+                            <p class="product__cart-descr">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                                 the mattis, leo quam aliquet congue.
-                            </div>
+                            </p>
                         </div>
                         <footer class="product__buy">
                             <button type="button" class="product__buy-btn product__buy-btn--bag btn-buy">
@@ -917,9 +910,9 @@
                             </div>
                         </div>
                         <div class="product__cart-info">
-                            <div class="product__cart-title">
+                            <a class="product__cart-title" href="#">
                                 Marketify Coffee Shop
-                            </div>
+                            </a>
                             <a href="#" class="product__cart-navigation product__cart-navigation--user user">
                                 EchoTheme
                             </a>
@@ -935,10 +928,10 @@
                                     </g>
                                 </svg>
                             </a>
-                            <div class="product__cart-descr">
+                            <p class="product__cart-descr">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                                 the mattis, leo quam aliquet congue.
-                            </div>
+                            </p>
                         </div>
                         <footer class="product__buy">
                             <button type="button" class="product__buy-btn product__buy-btn--bag btn-buy">
@@ -987,9 +980,9 @@
                             </div>
                         </div>
                         <div class="product__cart-info">
-                            <div class="product__cart-title">
+                            <a class="product__cart-title" href="#">
                                 Bryson - Portfolio Template
-                            </div>
+                            </a>
                             <a href="#" class="product__cart-navigation product__cart-navigation--user user">
                                 Artcorner
                             </a>
@@ -1011,10 +1004,10 @@
                                     </g>
                                 </svg>
                             </a>
-                            <div class="product__cart-descr">
+                            <p class="product__cart-descr">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                                 the mattis, leo quam aliquet congue.
-                            </div>
+                            </p>
                         </div>
                         <footer class="product__buy">
                             <button type="button" class="product__buy-btn product__buy-btn--bag btn-buy">
@@ -1066,9 +1059,9 @@
                             </div>
                         </div>
                         <div class="product__cart-info">
-                            <div class="product__cart-title">
+                            <a class="product__cart-title" href="#">
                                 E-commerce Shopping Cart
-                            </div>
+                            </a>
                             <a href="#" class="product__cart-navigation product__cart-navigation--user user">
                                 Design-Hub
                             </a>
@@ -1084,10 +1077,10 @@
                                     </g>
                                 </svg>
                             </a>
-                            <div class="product__cart-descr">
+                            <p class="product__cart-descr">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                                 the mattis, leo quam aliquet congue.
-                            </div>
+                            </p>
                         </div>
                         <footer class="product__buy">
                             <button type="button" class="product__buy-btn product__buy-btn--bag btn-buy">
@@ -1210,9 +1203,9 @@
                             </div>
                         </div>
                         <div class="product__cart-info">
-                            <div class="product__cart-title">
+                            <a class="product__cart-title" href="#">
                                 Bryson - Portfolio Template
-                            </div>
+                            </a>
                             <a href="#" class="product__cart-navigation product__cart-navigation--user user">
                                 Coder-Lab
                             </a>
@@ -1234,10 +1227,10 @@
                                     </g>
                                 </svg>
                             </a>
-                            <div class="product__cart-descr">
+                            <p class="product__cart-descr">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                                 the mattis, leo quam aliquet congue.
-                            </div>
+                            </p>
                         </div>
                         <footer class="product__buy">
                             <button type="button" class="product__buy-btn product__buy-btn--bag btn-buy">
@@ -1308,9 +1301,9 @@
                                 </div>
                             </div>
                             <div class="product__cart-info">
-                                <div class="product__cart-title">
+                                <a class="product__cart-title" href="#">
                                     E-commerce Shopping Cart
-                                </div>
+                                </a>
                                 <a href="#" class="product__cart-navigation product__cart-navigation--user user">
                                     Theme-Valley
                                 </a>
@@ -1327,10 +1320,10 @@
                                         </g>
                                     </svg>
                                 </a>
-                                <div class="product__cart-descr">
+                                <p class="product__cart-descr">
                                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                                     the mattis, leo quam aliquet congue.
-                                </div>
+                                </p>
                             </div>
                             <footer class="product__buy">
                                 <button type="button" class="product__buy-btn product__buy-btn--bag btn-buy">
@@ -1384,9 +1377,9 @@
                                 </div>
                             </div>
                             <div class="product__cart-info">
-                                <div class="product__cart-title">
+                                <a class="product__cart-title" href="#">
                                     Marketify Coffee Shop
-                                </div>
+                                </a>
                                 <a href="#" class="product__cart-navigation product__cart-navigation--user user">
                                     EchoTheme
                                 </a>
@@ -1403,10 +1396,10 @@
                                         </g>
                                     </svg>
                                 </a>
-                                <div class="product__cart-descr">
+                                <p class="product__cart-descr">
                                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                                     the mattis, leo quam aliquet congue.
-                                </div>
+                                </p>
                             </div>
                             <footer class="product__buy">
                                 <button type="button" class="product__buy-btn product__buy-btn--bag btn-buy">
@@ -1457,9 +1450,9 @@
                                 </div>
                             </div>
                             <div class="product__cart-info">
-                                <div class="product__cart-title">
+                                <a class="product__cart-title" href="#">
                                     Bryson - Portfolio Template
-                                </div>
+                                </a>
                                 <a href="#" class="product__cart-navigation product__cart-navigation--user user">
                                     Artcorner
                                 </a>
@@ -1476,10 +1469,10 @@
                                         </g>
                                     </svg>
                                 </a>
-                                <div class="product__cart-descr">
+                                <p class="product__cart-descr">
                                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                                     the mattis, leo quam aliquet congue.
-                                </div>
+                                </p>
                             </div>
                             <footer class="product__buy">
                                 <button type="button" class="product__buy-btn product__buy-btn--bag btn-buy">
@@ -1533,9 +1526,9 @@
                                 </div>
                             </div>
                             <div class="product__cart-info">
-                                <div class="product__cart-title">
+                                <a class="product__cart-title" href="#">
                                     E-commerce Shopping Cart
-                                </div>
+                                </a>
                                 <a href="#" class="product__cart-navigation product__cart-navigation--user user">
                                     Theme-Valley
                                 </a>
@@ -1737,11 +1730,11 @@
                         <div class="choose-people__card-title">
                             One Time Payment
                         </div>
-                        <div class="choose-people__card-descr">
+                        <p class="choose-people__card-descr">
                             Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                             the mattis, leo quam aliquet diam
                             congue is laoreet elit metus.
-                        </div>
+                        </p>
                     </article>
                     <article class="choose-people__card choose-people__card--nuber-two">
                         <div class="choose-people__card-img">
@@ -1768,11 +1761,11 @@
                         <div class="choose-people__card-title">
                             Quality Products
                         </div>
-                        <div class="choose-people__card-descr">
+                        <p class="choose-people__card-descr">
                             Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                             the mattis, leo quam aliquet diam
                             congue is laoreet elit metus.
-                        </div>
+                        </p>
                     </article>
                     <article class="choose-people__card choose-people__card--nuber-three">
                         <div class="choose-people__card-img">
@@ -1787,11 +1780,11 @@
                         <div class="choose-people__card-title">
                             100% Secure Payment
                         </div>
-                        <div class="choose-people__card-descr">
+                        <p class="choose-people__card-descr">
                             Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                             the mattis, leo quam aliquet diam
                             congue is laoreet elit metus.
-                        </div>
+                        </p>
                     </article>
                     <article class="choose-people__card choose-people__card--nuber-four">
                         <div class="choose-people__card-img">
@@ -1816,11 +1809,11 @@
                         <div class="choose-people__card-title">
                             Well Organized Code
                         </div>
-                        <div class="choose-people__card-descr">
+                        <p class="choose-people__card-descr">
                             Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                             the mattis, leo quam aliquet diam
                             congue is laoreet elit metus.
-                        </div>
+                        </p>
                     </article>
                     <article class="choose-people__card choose-people__card--nuber-five">
                         <div class="choose-people__card-img">
@@ -1836,11 +1829,11 @@
                         <div class="choose-people__card-title">
                             Life Time Free Update
                         </div>
-                        <div class="choose-people__card-descr">
+                        <p class="choose-people__card-descr">
                             Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                             the mattis, leo quam aliquet diam
                             congue is laoreet elit metus.
-                        </div>
+                        </p>
                     </article>
                     <article class="choose-people__card choose-people__card--nuber-six">
                         <div class="choose-people__card-img">
@@ -1861,11 +1854,11 @@
                         <div class="choose-people__card-title">
                             Fast and Friendly Support
                         </div>
-                        <div class="choose-people__card-descr">
+                        <p class="choose-people__card-descr">
                             Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                             the mattis, leo quam aliquet diam
                             congue is laoreet elit metus.
-                        </div>
+                        </p>
                     </article>
                 </div>
             </div>
@@ -1940,12 +1933,12 @@
                                     </path>
                                 </svg>
                             </header>
-                            <div class="feedback__row-descr">
+                            <p class="feedback__row-descr">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
                                 mattis, leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id
                                 nisi
                                 interdum is mollis. Praesent the pharetra, justo ut scelerisque.
-                            </div>
+                            </p>
                         </div>
                     </div>
                     <div class="feedback__inner-box">
@@ -1966,12 +1959,12 @@
                                     </path>
                                 </svg>
                             </header>
-                            <div class="feedback__row-descr">
+                            <p class="feedback__row-descr">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
                                 mattis, leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id
                                 nisi
                                 interdum is mollis. Praesent the pharetra, justo ut scelerisque.
-                            </div>
+                            </p>
                         </div>
                     </div>
                     <div class="feedback__inner-box">
@@ -1992,12 +1985,12 @@
                                     </path>
                                 </svg>
                             </header>
-                            <div class="feedback__row-descr">
+                            <p class="feedback__row-descr">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
                                 mattis, leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id
                                 nisi
                                 interdum is mollis. Praesent the pharetra, justo ut scelerisque.
-                            </div>
+                            </p>
                         </div>
                     </div>
                     <div class="feedback__inner-box">
@@ -2018,12 +2011,12 @@
                                     </path>
                                 </svg>
                             </header>
-                            <div class="feedback__row-descr">
+                            <p class="feedback__row-descr">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
                                 mattis, leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id
                                 nisi
                                 interdum is mollis. Praesent the pharetra, justo ut scelerisque.
-                            </div>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -2048,16 +2041,16 @@
                     est laborum dolo rumes fugats untras.
                 </div>
                 <div class="blog__inner">
-                    <article class="blog__card">
+                    <article class="blog__card" href="#">
                         <div class="blog__card-img" style="background-image: url(images/content/blog0img-1.jpg);"></div>
                         <div class="blog__card-info">
-                            <div class="blog__card-title">
+                            <a class="blog__card-title" href="#">
                                 Web Design Trends in 2017
-                            </div>
-                            <div class="blog__card-descr">
+                            </a>
+                            <p class="blog__card-descr">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                                 the mattis, leo quam aliquet congue.
-                            </div>
+                            </p>
                         </div>
                         <footer class="blog__footer">
                             <div class="blog__footer-time">
@@ -2095,16 +2088,16 @@
                             </button>
                         </footer>
                     </article>
-                    <article class="blog__card">
+                    <article class="blog__card" href="#">
                         <div class="blog__card-img" style="background-image: url(images/content/blog-img-2.jpg);"></div>
                         <div class="blog__card-info">
-                            <div class="blog__card-title">
+                            <a class="blog__card-title" href="#">
                                 The best advices to start your
                                 own project
-                            </div>
-                            <div class="blog__card-descr">
+                            </a>
+                            <p class="blog__card-descr">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                            </div>
+                            </p>
                         </div>
                         <footer class="blog__footer">
                             <div class="blog__footer-time">
@@ -2145,13 +2138,13 @@
                     <article class="blog__card">
                         <div class="blog__card-img" style="background-image: url(images/content/blog-img-3.jpg);"></div>
                         <div class="blog__card-info">
-                            <div class="blog__card-title">
+                            <a class="blog__card-title" href="#">
                                 Best Related Post Plugin
-                            </div>
-                            <div class="blog__card-descr">
+                            </a>
+                            <p class="blog__card-descr">
                                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                                 the mattis, leo quam aliquet congue.
-                            </div>
+                            </p>
                         </div>
                         <footer class="blog__footer">
                             <div class="blog__footer-time">
