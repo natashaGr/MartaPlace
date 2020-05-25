@@ -34,6 +34,15 @@ $(function () {
         variableWidth: true,
     });
 
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 340,
+        from: 30,
+        to: 300,
+        prefix: "$"
+    });
+
 });
 
 $(function () {

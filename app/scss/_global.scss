@@ -9,6 +9,29 @@ html {
 *::after {
   box-sizing: inherit;
 }
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
 
 a {
   text-decoration: none;
@@ -90,16 +113,15 @@ body {
   font-weight: 400;
   line-height: 30px;
   color: #000;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: $wp-bg;
-  }
+}
+
+.product__cart-user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 .platform {
@@ -200,6 +222,3 @@ body {
   }
 }
 
-.rate-star {
-
-}
