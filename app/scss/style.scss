@@ -431,7 +431,7 @@
       margin-left: 29px;
     }
   }
-  
+
   &__card-img {
     max-width: 125px;
     height: 120px;
@@ -744,7 +744,7 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     background-color: $btn;
     cursor: pointer;
-    transition: background-image .5s;
+    transition: background-image 0.5s;
 
     &:hover,
     &:focus {
@@ -844,7 +844,7 @@
     border: none;
     color: $color-t;
     cursor: pointer;
-    transition: background-color .5s, color .5s;
+    transition: background-color 0.5s, color 0.5s;
 
     & + .product__categories-btn {
       margin-left: 6px;
@@ -931,7 +931,7 @@
     border-radius: 23px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     color: #fff;
-    transition: background-color .5s, color .5s;
+    transition: background-color 0.5s, color 0.5s;
     & + .product__blackout-btn {
       margin-left: 16px;
     }
@@ -1400,7 +1400,7 @@
     border-radius: 28px;
     background-color: #fff;
     transition: background-color 0.5s, border 0.5s, color 0.5s;
-    
+
     &:hover,
     &:focus {
       background-color: $btn;
@@ -1550,11 +1550,11 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 28px;
     background-color: $btn;
-    transition: background-image .5s, border .5s, color .5s;
+    transition: background-image 0.5s, border 0.5s, color 0.5s;
 
     &:hover,
     &:focus {
-      background-image: linear-gradient(to left, #0d3ef2 0%, #7221a0 100%);;
+      background-image: linear-gradient(to left, #0d3ef2 0%, #7221a0 100%);
       border: 1px solid $btn;
     }
   }
@@ -1721,7 +1721,7 @@
     &:hover,
     &:focus {
       .money-support__row-img {
-        opacity: .5;
+        opacity: 0.5;
       }
       .money-support__row-text--blue {
         color: $wp-bg;
@@ -1739,21 +1739,21 @@
     margin: 0 auto;
     object-fit: cover;
     margin-bottom: 31px;
-    transition: opacity .5s;
+    transition: opacity 0.5s;
   }
 
   &__row-text {
     font-size: 24px;
     color: #000;
     cursor: pointer;
-    
+
     &--blue {
-      transition: color .5s;
+      transition: color 0.5s;
       color: $btn;
     }
 
     &--violet {
-      transition: color .5s;
+      transition: color 0.5s;
       color: $wp-bg;
     }
   }
@@ -1792,7 +1792,7 @@
     transition: all 1s;
     &:hover,
     &:focus {
-      background-image: linear-gradient(to left, #0d3ef2 0%, #7221a0 100%);;
+      background-image: linear-gradient(to left, #0d3ef2 0%, #7221a0 100%);
       color: #fff;
     }
   }
@@ -1833,7 +1833,7 @@
     letter-spacing: 0.9px;
     color: #fff;
     cursor: pointer;
-    transition: color .5s;
+    transition: color 0.5s;
     &:hover,
     &:focus {
       color: $wp-bg;
@@ -1883,7 +1883,7 @@
     font-size: 15px;
     line-height: 26px;
     color: #ababab;
-    transition: color .5s;
+    transition: color 0.5s;
     &:hover,
     &:focus {
       color: $wp-bg;
@@ -1902,7 +1902,7 @@
     width: 18px;
     height: 17px;
     path {
-      transition: fill .5s;
+      transition: fill 0.5s;
       fill: #fff;
     }
     &--phone {
@@ -1919,7 +1919,7 @@
   color: #ababab;
   margin-bottom: 17px;
   font-size: 15px;
-  transition: color .5s;
+  transition: color 0.5s;
   &:hover,
   &:focus {
     color: $btn;
@@ -1942,7 +1942,7 @@
     background-color: #fff;
     color: $btn;
     outline: transparent;
-    transition: border .5s;
+    transition: border 0.5s;
 
     &:hover,
     &:focus {
@@ -1963,7 +1963,7 @@
     border: 1px solid transparent;
     background-color: $btn;
     color: #fff;
-    transition:  background-color .5s, border .5s, color .5s;
+    transition: background-color 0.5s, border 0.5s, color 0.5s;
 
     &:hover,
     &:focus {
@@ -1993,17 +1993,17 @@
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    transition: opacity .5s;
+    transition: opacity 0.5s;
     &:hover,
     &:focus {
-      opacity: .5;
+      opacity: 0.5;
       &::before {
         transform: scale(1.2);
       }
     }
     &::before {
-      content: '';
-      transition: transform .5s;
+      content: "";
+      transition: transform 0.5s;
     }
 
     &--facebook {
@@ -2012,7 +2012,6 @@
         content: "\f09a";
         font-family: "icomoon";
         color: #fff;
-       
       }
     }
 
@@ -2068,7 +2067,7 @@
     padding: 40px 0;
     background-color: #192027;
     text-align: center;
-    
+
     &:hover,
     &:focus {
       .footer__copy-text--white {
@@ -2082,7 +2081,7 @@
     color: #999999;
 
     &--white {
-      transition: color .5s;
+      transition: color 0.5s;
       color: #fff;
     }
   }
@@ -2102,14 +2101,14 @@
 
   &__inner {
     max-width: 555px;
-    padding: 86px 0 30px;
+    padding: 88px 0 13px;
     margin: 0 auto;
     text-align: center;
   }
   &__text {
     font-size: 26px;
     color: #f3f3f8;
-    margin-bottom: 30px;
+    margin-bottom: 38px;
 
     &--bold {
       font-size: 26px;
@@ -2118,10 +2117,12 @@
   }
 }
 
-.search__form {
-  position: relative;
-  margin-bottom: 37px;
-  &-input {
+.search {
+  &__form {
+    position: relative;
+    margin-bottom: 35px;
+  }
+  &__form-input {
     display: block;
     width: 100%;
     padding: 21px 140px 20px 30px;
@@ -2130,11 +2131,13 @@
     border-radius: 28px;
     border: none;
     background-color: #ffffff;
+
     &:focus {
       outline: 1px solid $btn;
     }
   }
-  &-btn {
+
+  &__form-btn {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -2145,6 +2148,7 @@
     border: none;
     background-color: $btn;
     transition: background-color 0.5s, color 0.5s;
+
     &:focus {
       background-color: #fff;
       color: $btn;
@@ -2153,11 +2157,15 @@
 }
 
 .breadcrumbs {
+  padding: 0;
+
   &__list {
     position: relative;
     display: inline-block;
+
     & + .breadcrumbs__list {
-      margin-left: 25px;
+      margin-left: 20px;
+
       &::before {
         content: "/";
         position: absolute;
@@ -2167,9 +2175,11 @@
       }
     }
   }
+
   &__link {
     font-size: 15px;
     color: #ffffff;
+
     &--active {
       color: #bfcad7;
     }
@@ -2179,32 +2189,39 @@
 .filter-bar {
   box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
   background-color: #fff;
+
   &__inner {
     height: 100px;
     display: flex;
     align-items: center;
   }
+
   &__box {
     margin-left: auto;
+    display: flex;
   }
+
   &__item {
-    margin-left: 29px;
-    padding: 10px 20px;
+    padding: 8px 18px;
+    margin-left: 30px;
     border-radius: 3px;
     border: 1px solid #eceff2;
   }
 }
 
 .filter-bar__btn {
+  padding: 0;
   border: none;
   background-color: transparent;
   font-size: 16px;
   color: $descr;
   transition: color 0.5s;
   outline: transparent;
+
   & + .filter-bar__btn {
-    margin-left: 30px;
+    margin-left: 39px;
   }
+
   &--active,
   &:focus,
   &:hover {
@@ -2213,21 +2230,27 @@
 }
 
 .filter-bar__select {
-  max-width: 220px;
   height: 44px;
-  padding: 0 20px 0 20px;
-  color: #747b86;
+  padding: 0 85px 0 20px;
   font-size: 14px;
   border-radius: 3px;
   border: 1px solid #eceff2;
   appearance: none;
   outline: transparent;
+  color: #747b86;
+  font-size: 14px;
+  line-height: 32px;
   background-image: url(../images/icon/chevron-down.svg);
   background-repeat: no-repeat;
   background-position: 187px;
   background-size: 11px;
+  color: #747b86;
+  &:first-child {
+    margin-right: 31px;
+  }
+
   & + .filter-bar__select {
-    margin-left: 29px;
+    padding: 0 82px 0 20px;
   }
 }
 
@@ -2235,12 +2258,17 @@
   border: none;
   background-color: transparent;
   outline: transparent;
+  padding: 0;
+
   & + .filter-bar__icon {
-    margin-left: 15px;
+    margin-left: 10px;
+    margin-right: 2px;
   }
+
   path {
     fill: #747b86;
   }
+
   &--active {
     path {
       fill: $btn;
@@ -2260,23 +2288,29 @@
 }
 
 .product-page__filter-box {
-  padding: 31px 28px 34px 30px;
+  padding: 31px 28px 6px 28px;
   box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
   border-radius: 4px;
   background-color: #ffffff;
   margin-bottom: 29px;
+  &--checkbox {
+    padding: 31px 28px 26px 28px;
+  }
+  &--range {
+    padding: 31px 28px 41px 28px;
+  }
 }
 
 .product-page__title {
   position: relative;
   font-size: 20px;
   color: #010101;
-  padding-bottom: 25px;
+  padding-bottom: 28px;
   border-bottom: 1px solid #e7ebee;
   .product-page__icon {
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 1px;
     width: 13px;
     height: 13px;
     path {
@@ -2287,6 +2321,7 @@
 
 .product-page {
   &__item {
+    padding: 0;
     margin-top: 21px;
   }
 
@@ -2297,8 +2332,9 @@
   &__link {
     position: relative;
     font-size: 15px;
+    line-height: 16px;
     color: $descr;
-    padding-left: 13px;
+    padding-left: 21px;
     &::before {
       content: "";
       position: absolute;
@@ -2333,6 +2369,7 @@
     display: block;
     padding: 10px 0;
     font-size: 15px;
+    line-height: 16px;
     padding-left: 10px;
     color: $color-t;
   }
@@ -2365,7 +2402,7 @@
 
 .product-page__range {
   position: relative;
-  margin-top: 30px;
+  margin-top: 12px;
   text-align: center;
 }
 
@@ -2377,7 +2414,7 @@
 .irs-from,
 .irs-single,
 .irs-to {
-  top: 60px;
+  top: 56px;
 }
 
 .irs--flat .irs-from:before,
@@ -2389,7 +2426,7 @@
 .irs--flat .irs-from {
   position: static;
   display: inline-block;
-  margin-top: 55px;
+  margin-top: 50px;
   margin-right: 128px;
 }
 
@@ -2433,13 +2470,168 @@
 }
 
 .product-page__btn {
-  margin-top: 88px;
-  padding: 15px 32px;
+  margin-top: 78px;
+  padding: 13px 31px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
   border: none;
   border-radius: 22px;
   color: #fff;
   background-color: #0674ec;
   outline: none;
+}
+
+.product-page {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__card {
+    max-width: 262px;
+    width: 100%;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+    border-radius: 4px;
+    background-color: #ffffff;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 262px;
+    min-height: 160px;
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__card-info {
+    padding: 13px 19px 13px;
+    background-color: #fff;
+  }
+
+  &__card-title {
+    display: block;
+    margin-bottom: 11px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #000;
+  }
+
+  &__card-user {
+    display: block;
+    font-size: 15px;
+    color: #000;
+    padding-left: 37px;
+  }
+
+  &__card-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    .btn-icon {
+      top: 1px;
+    }
+  }
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 11px 20px 15px;
+    border-top: 1px solid #ececec;
+    background-color: #fff;
+    .platform-icon {
+      top: 8px;
+    }
+    .platform {
+      padding-left: 14px;
+    }
+  }
+}
+
+.product-page {
+  &__pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 33px;
+  }
+
+  &__pagination-inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 397px;
+    width: 100%;
+    padding: 0 0 0 41px;
+    margin: 0;
+  }
+
+  &__pagination-link {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 19px;
+    width: 50px;
+    min-height: 38px;
+    color: #747b86;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #ffffff;
+
+    &--arrow {
+      padding: 13px 17px;
+      margin-right: 20px;
+      transition:  background-color .5s;
+
+      &:hover,
+      &:focus {
+        background-color: $wp-bg;
+        .product-page__pagination-icon {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+
+    &--active {
+      margin-right: 0;
+      margin-left: 20px;
+      background-color: $wp-bg;
+
+      .product-page__pagination-icon {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+
+    &--activ-link {
+      background-color: $btn;
+      color: #fff;
+    }
+  }
+
+  &__pagination-icon {
+    width: 16px;
+    height: 12px;
+    path {
+      transition: fill .5s;
+      fill: #000;
+    }
+  }
+  
+  .number{
+    transition: background-color .5s, color .5s;
+    &:hover,
+    &:focus {
+      background-color: $btn;
+      color: #fff;
+    }
+  }
 }
 // end category-page
