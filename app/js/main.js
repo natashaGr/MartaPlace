@@ -43,7 +43,21 @@ $(function () {
         max: 340,
         from: 30,
         to: 300,
+        step: 0,
         prefix: "$"
+    });
+
+    $('.filter-bar__icon--grid').on('click', function () {
+        $('.product-page__card').removeClass('list');
+        $('.product-page__box').removeClass('list');
+        $('.filter-bar__icon--grid').addClass('filter-bar__icon--active');
+        $('.filter-bar__icon--list').removeClass('filter-bar__icon--active');
+    });
+    $('.filter-bar__icon--list').on('click', function () {
+        $('.product-page__box').addClass('list');
+        $('.product-page__card').addClass('list');
+        $('.filter-bar__icon--list').addClass('filter-bar__icon--active');
+        $('.filter-bar__icon--grid').removeClass('filter-bar__icon--active');
     });
 
 });
