@@ -17,6 +17,8 @@ body {
 }
 
 .wrapper {
+  position: relative;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -42,8 +44,6 @@ li {
 body {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
-  line-height: 15px;
-  
 }
 
 .container {
@@ -70,6 +70,7 @@ body {
   text-transform: capitalize;
   box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
   border-radius: 4px;
+  line-height: 28px;
   color: #000;
   background-color: #fff;
 }
@@ -77,6 +78,7 @@ body {
 .title-text {
   text-align: center;
   font-size: 36px;
+  line-height: 40px;
   color: #000;
   &--blue {
     color: $btn;
@@ -179,5 +181,38 @@ body {
   top: 7px;
   left: 0;
 }
+
+.dots {
+  position: relative;
+  max-width: 100px;
+  margin: 0 auto 40px;
+}
+
+.slick-dots {
+  position: absolute;
+  top: -80px;
+  padding: 0;
+  font-size: 0;
+  display: flex;
+
+  li + li {
+    margin-left: 6px;
+  }
+
+  button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: $wp-bg;
+    outline: none;
+  }
+
+  .slick-active button {
+    background-color: $btn;
+  }
+}
+
+
 
 
