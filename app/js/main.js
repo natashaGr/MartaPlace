@@ -61,7 +61,7 @@ $(function () {
         ]
     });
 
-    $('.header__user').on('click', function(){
+    $('.header__user').on('click', function () {
         $('.header__profile-menu').slideToggle();
     });
 
@@ -112,71 +112,31 @@ $(function () {
             }
         });
     });
-   
 
-    var time = 4;
-    $('.fun-fact__card-number--yellow').each(function () {
-        var i = 1,
-            num = $(this).data('num'),
-            step = 1000 * time / num,
-            that = $(this),
-            int = setInterval(function () {
-                if (i <= num) {
-                    that.html(i);
-                }
-                else {
-                    clearInterval(int);
-                }
-                i++;
-            }, step);
+    $('.fun-fact').viewportChecker({
+        callbackFunction: function (elem, action) {
+            $('.fun-fact__card-number--yellow').animateNumber({ number: 38900 }, 10000);
+            $('.fun-fact__card-number--blue').animateNumber({ number: 3736 }, 10000);
+            $('.fun-fact__card-number--green').animateNumber({ number: 2736 }, 5000);
+            $('.fun-fact__card-number--red').animateNumber({ number: 25736 }, 5000);
+        },
     });
 
-    var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-    $('.fun-fact__card-number--yellow').animateNumber(
-        {
-            number: 38436,
-            numberStep: comma_separator_number_step
-        },
-        {
-            easing: 'swing',
-            duration: 30000
-        }
-    );
-    $('.fun-fact__card-number--blue').animateNumber(
-        {
-            number: 3736,
-            numberStep: comma_separator_number_step
-        },
-        {
-            easing: 'swing',
-            duration: 30000
-        }
-    );
-    $('.fun-fact__card-number--green').animateNumber(
-        {
-            number: 2736,
-            numberStep: comma_separator_number_step
-        },
-        {
-            easing: 'swing',
-            duration: 30000
-        }
-    );
-    $('.fun-fact__card-number--red').animateNumber(
-        {
-            number: 25736,
-            numberStep: comma_separator_number_step
-        },
-        {
-            easing: 'swing',
-            duration: 30000
-        }
-    );
+    
+
+
 });
 
-
-
 $(function () {
+    $('.single-product__tab .single-product__info').on('click', function (event) {
+        var id = $(this).attr('data-id');
+        $('.single-product__tab').find('.single-product__tab-item').removeClass('active-tab').hide();
+        $('.single-product__tab .single-product__tabs').find('.single-product__info').removeClass('active');
+        $(this).addClass('active');
+        $('#' + id).addClass('active-tab').fadeIn();
+        return false;
+    });
+
     var mixer = mixitup('.product__inner');
 });
 
