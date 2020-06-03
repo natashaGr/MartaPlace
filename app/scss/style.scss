@@ -4259,8 +4259,8 @@
     border: 1px solid transparent;
     color: #fff;
     background-color: #0674ec;
-    transition: color .5s, background-color .5s, border .5s;
-    
+    transition: color 0.5s, background-color 0.5s, border 0.5s;
+
     &:hover,
     &:focus {
       color: $btn;
@@ -4271,6 +4271,41 @@
 }
 // end 404
 
+// start terms-conditions
+
+.security {
+  padding: 63px 0 119px;
+
+  &__wrapper {
+    padding-bottom: 79px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+    border-radius: 4px;
+    background-color: #fff;
+  }
+
+  &__title {
+    padding: 34px 32px 22px;
+    font-size: 24px;
+    border-bottom: 1px solid #e8ebf0;
+    color: #000;
+
+    &--text {
+      padding: 45px 32px 22px;
+      
+    }
+  }
+
+  &__descr {
+    margin: 23px 0 18px;
+    padding: 0 34px 0 34px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $descr;
+  }
+}
+
+// end terms-conditions
 // scrolbar
 
 .followers-slider__info,
