@@ -17,11 +17,6 @@
     }
   }
   .product-slider {
-    .slick-list.draggable {
-      margin-right: 20px;
-      margin-left: 20px;
-    }
-
     &__info-descr {
       margin-top: 18px;
       margin-bottom: 0;
@@ -47,7 +42,37 @@
     }
 
     &__dropdown-wrapper {
+      min-width: 100%;
+      position: static;
+      border-bottom: 5px solid $btn;
+      padding-bottom: 20px;
+    }
+
+    &__dropdown-pages {
+      flex-wrap: wrap;
+    }
+
+    &__dropdown-title {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__dropdown-link {
+      border-bottom: 1px solid #ececec;
+    }
+
+    &__dropdown-box {
+      max-width: 100%;
       display: none;
+    }
+
+    &__dropdown-title {
+      &--dashboard {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
 
     &__info-seller {
@@ -161,6 +186,7 @@
       max-width: 100%;
       text-align: center;
       margin-bottom: 10px;
+      border-radius: 4px;
     }
 
     &__option {
@@ -197,6 +223,7 @@
 
     &__img {
       max-width: 100%;
+      border-radius: 4px 4px 0 0;
     }
 
     &__info {
@@ -236,7 +263,6 @@
   }
 
   .fun-fact {
-
     &__inner {
       flex-wrap: wrap;
     }
@@ -252,7 +278,6 @@
   }
 
   .sell-buy {
-
     &__inner {
       display: block;
     }
@@ -263,7 +288,6 @@
   }
 
   .feedback {
-
     &__row {
       max-width: 100%;
     }
@@ -336,11 +360,77 @@
       justify-content: center;
     }
   }
+
+  .filter-bar {
+    &__wrapper {
+      margin: 20px auto 20px;
+      text-align: center;
+    }
+
+    &__box {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+
+    &__select {
+      &:first-child {
+        margin-right: 55px;
+      }
+    }
+
+    &__item {
+      margin-left: 70px;
+      display: none;
+    }
+  }
+
+  .product-page {
+    &__wrapper {
+      flex-wrap: wrap;
+      padding: 50px 0 120px;
+    }
+
+    &__filter {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 100%;
+      width: 100%;
+      margin-left: -20px;
+      margin-right: 0;
+    }
+
+    &__filter-box {
+      max-width: calc(100% / 2 - 40px);
+      width: 100%;
+      margin-left: 40px;
+    }
+
+    &__inner {
+      padding-left: 20px;
+    }
+    &__card {
+      max-width: calc(100% / 2 - 20px);
+      margin-right: 20px;
+      width: 100%;
+    }
+
+    &__img {
+      min-width: 100%;
+    }
+
+    &__box {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 375px) {
   .header {
-
     &__info {
       position: static;
     }
@@ -377,7 +467,7 @@
       opacity: 1;
       height: auto;
       border-bottom: 1px solid $btn;
-     
+
       &::before {
         content: none;
       }
@@ -403,6 +493,25 @@
 
     &__dropdown-menu {
       border-bottom: 3px solid $btn;
+    }
+
+    &__dropdown-box {
+      width: 100%;
+      & + & {
+        margin-left: 0;
+      }
+    }
+
+    &__dropdown-item {
+      max-width: 100%;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__dropdown-link {
+      max-width: 100%;
+      width: 100%;
     }
   }
 
@@ -483,6 +592,11 @@
     &__cart-img {
       max-width: 100%;
     }
+
+    .rate-star {
+      position: absolute;
+      right: 92px;
+    }
   }
 
   .followers-slider {
@@ -494,6 +608,14 @@
 
     &__dots {
       margin-top: 70px;
+    }
+
+    &__buy {
+      padding: 19px 30px 12px 10px;
+    }
+
+    &__info {
+      padding-left: 16px;
     }
   }
 
@@ -512,7 +634,6 @@
   }
 
   .fun-fact {
-
     &__inner {
       padding: 70px 0 10px;
     }
@@ -554,7 +675,6 @@
   }
 
   .blog {
-
     &__card-img {
       max-width: 100%;
     }
@@ -582,7 +702,6 @@
   }
 
   .footer {
-
     &__row {
       max-width: 100%;
       border-bottom: 1px solid #ececec;
@@ -610,6 +729,62 @@
 
     &__social-list {
       margin-right: 7px;
+    }
+  }
+
+  .filter-bar {
+    &__box {
+      flex-wrap: wrap;
+    }
+
+    &__select {
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .product-page {
+    &__filter {
+      margin-left: 0;
+    }
+
+    &__wrapper {
+      padding: 50px 0 50px;
+    }
+
+    &__filter-box {
+      max-width: 100%;
+      margin-left: 0;
+    }
+
+    &__inner {
+      padding-left: 0;
+      margin-right: 0;
+    }
+
+    &__card {
+      max-width: 100%;
+      margin-right: 0;
+    }
+
+    &__pagination {
+      max-width: 100%;
+      justify-content: flex-start;
+    }
+
+    &__pagination-inner {
+      max-width: 100%;
+      justify-content: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__pagination-list {
+      &--num {
+        display: none;
+      }
     }
   }
 }

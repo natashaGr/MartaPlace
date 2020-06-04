@@ -13,7 +13,6 @@ html {
 html,
 body {
   height: 100%;
-  
 }
 
 .wrapper {
@@ -118,9 +117,9 @@ body {
   position: relative;
   padding-left: 17px;
   font-size: 15px;
-  font-weight: 400;
-  line-height: 30px;
-  color: $wp-bg;
+  background-size: 16px;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 .platform-icon {
@@ -236,7 +235,3 @@ body {
 .icon-dribbble {
   background-color: #ea4c89;
 }
-
-
-
-

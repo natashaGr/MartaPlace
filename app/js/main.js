@@ -4,6 +4,15 @@ $(function () {
         appendArrows: '.product-slider__arrows',
         prevArrow: '<button type="button" class="slick-arrows arrows-prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20"><path fill="#000000" d="M14 20c0.128 0 0.256-0.049 0.354-0.146 0.195-0.195 0.195-0.512 0-0.707l-8.646-8.646 8.646-8.646c0.195-0.195 0.195-0.512 0-0.707s-0.512-0.195-0.707 0l-9 9c-0.195 0.195-0.195 0.512 0 0.707l9 9c0.098 0.098 0.226 0.146 0.354 0.146z"></path></svg></button>',
         nextArrow: '<button type="button" class="slick-arrows arrows-next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20"><path fill="#000000" d="M5 20c-0.128 0-0.256-0.049-0.354-0.146-0.195-0.195-0.195-0.512 0-0.707l8.646-8.646-8.646-8.646c-0.195-0.195-0.195-0.512 0-0.707s0.512-0.195 0.707 0l9 9c0.195 0.195 0.195 0.512 0 0.707l-9 9c-0.098 0.098-0.226 0.146-0.354 0.146z"></path></svg></button>',
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 800,
+                settings: {
+                    variableWidth: false,
+                }
+            }
+        ]
     });
 
     $('.rate-star').rateYo({
@@ -65,16 +74,77 @@ $(function () {
         $('.header__profile-menu').slideToggle();
     });
 
+    $('.header__dropdown-slogan--martplace').on('click', function () {
+        $('.header__dropdown-item--martplace').slideToggle();
+    });
+    $('.header__dropdown-slogan--dashboard').on('click', function () {
+        $('.header__dropdown-box--dashboard').slideToggle();
+    });
+    $('.header__dropdown-title--other').on('click', function () {
+        $('.header__dropdown-box--other').slideToggle();
+    });
 
-    $(".js-range-slider").ionRangeSlider({
+
+    var $range = $(".product-page__form-slider"),
+        $inputFrom = $(".product-page__form-price--from"),
+        $inputTo = $(".product-page__form-price--to"),
+        instance,
+        min = 0,
+        max = 400,
+        from = 0,
+        to = 0;
+
+    $range.ionRangeSlider({
+        skin: "round",
         type: "double",
-        min: 0,
-        max: 340,
+        min: min,
+        max: 320,
         from: 30,
         to: 300,
-        step: 0,
-        prefix: "$"
+        hide_min_max: true,
+        hide_from_to: true,
+
+        onStart: updateInputs,
+        onChange: updateInputs
     });
+    instance = $range.data("ionRangeSlider");
+    function updateInputs(data) {
+        from = data.from;
+        to = data.to;
+        $inputFrom.prop("value", '$' + from);
+        $inputTo.prop("value", '$' + to);
+    }
+
+    $inputFrom.on("input", function () {
+        var val = $(this).prop("value");
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+
+        instance.update({
+            from: val
+        });
+    });
+
+    $inputTo.on("input", function () {
+        var val = $(this).prop("value");
+
+        // validate
+        if (val < from) {
+            val = from;
+        } else if (val > max) {
+            val = max;
+        }
+
+        instance.update({
+            to: val
+        });
+    });
+
+
 
     $('.filter-bar__icon--grid').on('click', function () {
         $('.product-page__card').removeClass('list');
@@ -122,7 +192,7 @@ $(function () {
         },
     });
 
-    
+
 
 
 });
