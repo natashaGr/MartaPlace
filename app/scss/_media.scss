@@ -248,11 +248,16 @@
     }
 
     &__cart-img {
-      max-width: 100%;
+      min-width: 100%;
     }
 
     &__cart-info {
       height: 273px;
+      padding: 25px 19px 25px;
+    }
+
+    &__buy {
+      padding: 11px 20px 16px 10px;
     }
   }
 
@@ -305,8 +310,6 @@
     }
 
     &__card {
-      display: block;
-      max-width: 361px;
       margin-bottom: 20px;
     }
   }
@@ -383,7 +386,6 @@
     }
 
     &__item {
-      margin-left: 70px;
       display: none;
     }
   }
@@ -586,7 +588,17 @@
 
     &__cart {
       max-width: 100%;
+      width: 100%;
       margin-right: 0;
+      &:hover {
+        .product__blackout {
+          height: 220px;
+        }
+      }
+    }
+
+    &__cart-info {
+      height: 240px;
     }
 
     &__cart-img {
@@ -675,6 +687,14 @@
   }
 
   .blog {
+    &__card-link {
+      display: block;
+      width: 100%;
+    }
+    &__card {
+      max-width: 100%;
+      width: 100%;
+    }
     &__card-img {
       max-width: 100%;
     }
@@ -797,6 +817,57 @@
 
     &__footer-time {
       padding-right: 20px;
+    }
+  }
+  .product {
+    .rate-star {
+      right: 68px;
+    }
+
+    &__cart {
+      &:hover {
+        .product__blackout {
+          height: 185px;
+        }
+      }
+    }
+
+    &__cart-title {
+      font-size: 18px;
+    }
+
+    &__cart-descr {
+      line-height: 25px;
+      font-size: 15px;
+    }
+  }
+  .followers-slider {
+    &__card {
+      &:hover {
+        .followers-slider__blackout {
+          height: 0;
+        }
+      }
+    }
+    &__info {
+      padding: 30px 80px 5px 10px;
+    }
+
+    &__info-title {
+      font-size: 18px;
+    }
+
+    &__descr {
+      font-size: 15px;
+      line-height: 25px;
+    }
+
+    &__buy {
+      padding-right: 83px;
+    }
+    .rate-star {
+      margin-left: 0;
+      padding: 0;
     }
   }
 }
