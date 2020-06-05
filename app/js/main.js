@@ -42,6 +42,7 @@ $(function () {
                     autoplay: true,
                     autoplaySpeed: 4000,
                     appendDots: '.dots',
+                    variableWidth: true,
                     slidesToShow: 1,
                 }
             }
