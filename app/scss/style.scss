@@ -2473,7 +2473,7 @@
 // start
 //          banner
 .banner {
-  padding: 104px 0 107px;
+  padding: 104px 0 111px;
   text-align: center;
   background-color: #151a20;
   background-image: linear-gradient(to left, #0d3ef2 0%, #7221a0 100%);
@@ -2481,7 +2481,7 @@
 
   &__slogan {
     display: block;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     font-size: 36px;
     color: #fff;
   }
@@ -2494,7 +2494,8 @@
 
   &__btn {
     display: inline-block;
-    padding: 20px 44px 19px 43px;
+    margin-left: 3px;
+    padding: 18px 44px 18px 43px;
     font-size: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 28px;
@@ -2827,18 +2828,19 @@
   &__list {
     position: relative;
     display: inline-block;
+    text-transform: capitalize;
 
     & + & {
-      margin-left: 14px;
-      // margin-left: 20px;
+      // margin-left: 14px;
+      margin-left: 20px;
 
       &::before {
         content: "/";
         position: absolute;
-        // top: 0;
-        // left: -16px;
-        top: 1px;
-        left: -12px;
+        top: 0;
+        left: -16px;
+        // top: 1px;
+        // left: -12px;
         color: #f3f3f8;
       }
     }
@@ -3530,6 +3532,10 @@
     padding: 105px 0 104px;
   }
 
+  &--how-works {
+    padding: 89px 0 2px;
+  }
+
   &__inner {
     max-width: 820px;
     padding: 0 4px;
@@ -3537,6 +3543,11 @@
 
   &__breadcrumbs {
     margin: 0 0 26px;
+
+    &--how-works {
+      margin-top: 71px;
+      text-align: center;
+    }
   }
 
   &__slogan {
@@ -3544,9 +3555,17 @@
     font-weight: 500;
     line-height: 24px;
     color: #ffffff;
-    &--contact {
+
+    &--contact,
+    &--how-works {
       text-align: center;
       margin-bottom: 25px;
+    }
+
+    &--text {
+      display: block;
+      margin-top: 24px;
+      font-weight: 300;
     }
   }
 
@@ -4922,6 +4941,83 @@
   }
 }
 // end price
+// start how-works
+.how-works {
+  &__list {
+    position: relative;
+  
+    padding: 98px 0 100px;
+    &--bg-white {
+      background-color: #fff;
+    }
+
+    &--bg-gray {
+      background-color: #eff1f5;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+  }
+
+  &__list-box {
+    max-width: 455px;
+    width: 100%;
+    margin-left: auto;
+    &--position {
+      margin-left: 20px;
+      margin-right: auto;
+    }
+  }
+
+  &__img {
+    min-height: 352px;
+    background-size: 458px;
+    background-position: center;
+    flex: 0 0 458px;
+  }
+
+  &__title {
+    margin-top: 31px;
+    font-size: 30px;
+    color: #000;
+  }
+
+  &__descr {
+    margin: 32px 0 23px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $descr;
+  }
+
+  &__link {
+    display: block;
+    max-width: 170px;
+    width: 100%;
+    padding: 15px 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    border: 1px solid transparent;
+    background-color: $btn;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+
+    &--color-white {
+      background-color: #fff;
+      color: $btn;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      border: 1px solid $btn;
+      color: $btn;
+    }
+  }
+}
+// end how-works
 // scrolbar
 
 .followers-slider__info,
