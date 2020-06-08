@@ -7,7 +7,7 @@ $(function () {
         variableWidth: true,
         responsive: [
             {
-                breakpoint: 800,
+                breakpoint: 1200,
                 settings: {
                     variableWidth: false,
                 }
@@ -23,8 +23,6 @@ $(function () {
         readOnly: true,
         rating: 4.6,
         "starSvg": '<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><path d="M0,0h24v24H0V0z" fill="none"/><path d="M0,0h24v24H0V0z" fill="none"/></g><g><path d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/></g></svg>',
-
-
     });
 
     $('.followers-slider__inner').slick({
@@ -34,6 +32,13 @@ $(function () {
         prevArrow: '<button type="button" class="slick-arrows arrows-prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20"><path fill="#000000" d="M14 20c0.128 0 0.256-0.049 0.354-0.146 0.195-0.195 0.195-0.512 0-0.707l-8.646-8.646 8.646-8.646c0.195-0.195 0.195-0.512 0-0.707s-0.512-0.195-0.707 0l-9 9c-0.195 0.195-0.195 0.512 0 0.707l9 9c0.098 0.098 0.226 0.146 0.354 0.146z"></path></svg></button>',
         nextArrow: '<button type="button" class="slick-arrows arrows-next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20"><path fill="#000000" d="M5 20c-0.128 0-0.256-0.049-0.354-0.146-0.195-0.195-0.195-0.512 0-0.707l8.646-8.646-8.646-8.646c-0.195-0.195-0.195-0.512 0-0.707s0.512-0.195 0.707 0l9 9c0.195 0.195 0.195 0.512 0 0.707l-9 9c-0.098 0.098-0.226 0.146-0.354 0.146z"></path></svg></button>',
         responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    variableWidth: false,
+                }
+            },
             {
                 breakpoint: 400,
                 settings: {
@@ -86,9 +91,9 @@ $(function () {
     });
 
 
-    var $range = $(".product-page__form-slider"),
-        $inputFrom = $(".product-page__form-price--from"),
-        $inputTo = $(".product-page__form-price--to"),
+    var $range = $(".product-grid__form-slider"),
+        $inputFrom = $(".product-grid__form-price--from"),
+        $inputTo = $(".product-grid__form-price--to"),
         instance,
         min = 0,
         max = 400,
@@ -148,14 +153,13 @@ $(function () {
 
 
     $('.filter-bar__icon--grid').on('click', function () {
-        $('.product-page__card').removeClass('list');
-        $('.product-page__box').removeClass('list');
+        $('.product-grid__card').removeClass('list');
         $('.filter-bar__icon--grid').addClass('filter-bar__icon--active');
         $('.filter-bar__icon--list').removeClass('filter-bar__icon--active');
     });
+
     $('.filter-bar__icon--list').on('click', function () {
-        $('.product-page__box').addClass('list');
-        $('.product-page__card').addClass('list');
+        $('.product-grid__card').addClass('list');
         $('.filter-bar__icon--list').addClass('filter-bar__icon--active');
         $('.filter-bar__icon--grid').removeClass('filter-bar__icon--active');
     });
@@ -164,6 +168,27 @@ $(function () {
         $(this).toggleClass('open');
         $('.header__menu-item').slideToggle();
     });
+
+    $('.product-grid__title--categories').click(function () {
+        $(this).toggleClass('list');
+        $('.product-grid__list').slideToggle();
+    });
+
+    $('.product-grid__title--checkbox').click(function () {
+        $(this).toggleClass('list');
+        $('.product-grid__form').slideToggle();
+    });
+
+    $('.product-grid__title--range').click(function () {
+        $(this).toggleClass('list');
+        $('.product-grid__range').slideToggle();
+    });
+
+    $('.product-grid__filter-btn').click(function () {
+        $('.product-grid__filter-box').slideToggle();
+    });
+
+
 
 
     $(window).scroll(function () {

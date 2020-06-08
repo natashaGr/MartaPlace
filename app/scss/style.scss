@@ -122,6 +122,17 @@
   &__cart-item {
     padding: 22px 25px 22px 24px;
     border-bottom: 1px solid #e8ebf0;
+
+    &:hover,
+    &:focus {
+      .header__cart-img {
+        opacity: 0.5;
+      }
+
+      .header__cart-title {
+        color: $btn;
+      }
+    }
   }
 
   &__cart-img {
@@ -130,6 +141,7 @@
     float: left;
     margin-top: 3px;
     margin-right: 15px;
+    transition: opacity 0.5s;
   }
 
   &__cart-info,
@@ -145,6 +157,7 @@
     line-height: 22px;
     font-weight: 500;
     padding-right: 10px;
+    transition: color 0.5s;
   }
 
   &__cart-trash {
@@ -207,6 +220,12 @@
     font-size: 15px;
     color: #fefefe;
     background-color: $wp-bg;
+    transition: opacity 0.5s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
 
     &--checkout {
       background-color: $btn;
@@ -271,15 +290,32 @@
     background-color: transparent;
     font-size: 18px;
     color: #000;
+    transition: color 0.5s;
     &--all {
       color: $btn;
       font-size: 15px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $wp-bg;
     }
   }
 
   &__message-item {
     padding: 18px 25px 22px;
     border-top: 1px solid #e8ebf0;
+
+    &:hover,
+    &:focus {
+      .header__message-name {
+        color: $btn;
+      }
+
+      .header__message-user {
+        opacity: 0.5;
+      }
+    }
   }
 
   &__message-user,
@@ -290,6 +326,7 @@
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    transition: opacity 0.5s;
   }
 
   &__message-info {
@@ -305,6 +342,7 @@
     font-weight: 500;
     padding-right: 30px;
     color: $text;
+    transition: color 0.5s;
     &::before {
       position: absolute;
       font-family: "Linearicons-Free";
@@ -371,10 +409,22 @@
   &__notification-item {
     border-top: 1px solid #e8ebf0;
     padding: 20px 0 14px;
+
+    &:hover,
+    &:focus {
+      .header__notification-user {
+        opacity: 0.5;
+      }
+
+      .header__notification-name {
+        color: $wp-bg;
+      }
+    }
   }
 
   &__notification-user {
     margin-top: 3px;
+    transition: opacity 0.5s;
   }
 
   &__notification-name {
@@ -383,6 +433,7 @@
     line-height: 20px;
     color: $text;
     margin-bottom: 5px;
+    transition: color 0.5s;
   }
 
   &__notification-theme {
@@ -566,6 +617,7 @@
 
   &__dropdown-menu {
     position: absolute;
+    z-index: 1;
     max-width: 270px;
     width: 100%;
     top: 0;
@@ -1013,7 +1065,9 @@
   }
 
   &__btn {
-    padding: 18px 66px;
+    max-width: 223px;
+    width: 100%;
+    padding: 18px 10px;
     font-size: 16px;
     border: 1px solid transparent;
     background-color: $btn;
@@ -1111,7 +1165,7 @@
 
   &__img {
     display: block;
-    min-width: 555px;
+    max-width: 555px;
     width: 100%;
     max-height: 455px;
     height: 100%;
@@ -1352,6 +1406,8 @@
     align-items: center;
     margin-bottom: 30px;
     padding: 37px 27px 42px 32px;
+    position: relative;
+    z-index: 1;
   }
 
   &__title-filter {
@@ -1552,7 +1608,7 @@
 
   &__cart-img {
     display: block;
-    min-width: 360px;
+    max-width: 360px;
     width: 100%;
     min-height: 230px;
     height: 230px;
@@ -1686,7 +1742,7 @@
 
   &__img {
     display: block;
-    min-width: 360px;
+    max-width: 360px;
     width: 100%;
     max-height: 230px;
     height: 100%;
@@ -2310,7 +2366,7 @@
   }
 
   &__card-img {
-    min-width: 360px;
+    max-width: 360px;
     width: 100%;
     max-height: 230px;
     height: 100%;
@@ -2769,7 +2825,7 @@
     color: #f3f3f8;
     margin-bottom: 30px;
 
-    &--bold {
+    .text-bold {
       font-size: 26px;
       font-weight: 500;
     }
@@ -2825,7 +2881,7 @@
 .breadcrumbs {
   padding: 0;
 
-  &__list {
+  &__item {
     position: relative;
     display: inline-block;
     text-transform: capitalize;
@@ -2849,9 +2905,16 @@
   &__link {
     font-size: 15px;
     color: #ffffff;
+    transition: color 0.5s;
+
+    &:hover,
+    &:focus {
+      color: $btn;
+    }
 
     &--active {
       color: #bfcad7;
+      cursor: pointer;
     }
   }
 }
@@ -2901,7 +2964,8 @@
 
   &__select {
     height: 44px;
-    padding: 0 85px 0 20px;
+    width: 220px;
+    padding: 0 40px 0 20px;
     font-size: 14px;
     border-radius: 3px;
     border: 1px solid #eceff2;
@@ -2927,7 +2991,6 @@
     }
 
     & + & {
-      padding: 0 82px 0 20px;
     }
   }
 
@@ -2955,7 +3018,7 @@
   }
 }
 
-.product-page {
+.product-grid {
   &__wrapper {
     display: flex;
     padding: 80px 0 120px;
@@ -2967,6 +3030,19 @@
     margin-right: 32px;
   }
 
+  &__filter-btn {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  &__filter-icon {
+    path {
+      fill: $btn;
+    }
+  }
+
   &__filter-box {
     padding: 28px 27px 6px 28px;
     box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
@@ -2974,7 +3050,7 @@
     background-color: #ffffff;
     margin-bottom: 29px;
     &--checkbox {
-      padding: 28px 28px 26px 28px;
+      padding: 28px 28px 7px 28px;
     }
     &--range {
       padding: 26px 28px 14px 28px;
@@ -3008,12 +3084,12 @@
     }
   }
 
-  &__item {
+  &__list {
     padding: 0;
     margin-top: 18px;
   }
 
-  &__list {
+  &__item {
     display: flex;
     align-items: center;
   }
@@ -3084,7 +3160,7 @@
     &:checked,
     &:focus,
     &:checked:focus {
-      & + .product-page__custom {
+      & + .product-grid__custom {
         background-image: linear-gradient(to left, #0d3ef2 0%, #7221a0 100%);
       }
     }
@@ -3184,6 +3260,7 @@
   }
 
   &__card {
+    position: relative;
     max-width: calc(100% / 3 - 30px);
     margin-right: 30px;
     margin-bottom: 30px;
@@ -3194,15 +3271,57 @@
 
     &:hover,
     &:focus {
-      .product-page__card-title {
+      .product-grid__card-title {
         color: $btn;
       }
+      .product-grid__blackout {
+        background-image: linear-gradient(to left, #0674ec 0%, #7347c1 100%);
+        opacity: 0.9;
+        height: 100%;
+      }
+    }
+  }
+
+  &__card-shell {
+    position: relative;
+  }
+
+  &__blackout {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    transition: background-image 1s, opacity 1s, height 1s;
+  }
+
+  &__blackout-btn {
+    padding: 11px 21px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid #f4f4f4;
+    border-radius: 23px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+    & + & {
+      margin-left: 16px;
+    }
+    &--active,
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: $btn;
     }
   }
 
   &__img {
     display: block;
-    min-width: 262px;
+    max-width: 262px;
     width: 100%;
     max-height: 160px;
     height: 100%;
@@ -3213,6 +3332,8 @@
   &__card-info {
     padding: 13px 14px 13px 19px;
     background-color: #fff;
+    height: 151px;
+    overflow: auto;
   }
 
   &__card-title {
@@ -3250,6 +3371,7 @@
     padding: 13px 20px 15px;
     border-top: 1px solid #ececec;
     background-color: #fff;
+    border-radius: 4px;
   }
 
   &__buy-icon {
@@ -3276,7 +3398,7 @@
     margin-top: 30px;
   }
 
-  &__pagination-inner {
+  &__pagination-list {
     display: flex;
     justify-content: space-between;
     max-width: 397px;
@@ -3306,7 +3428,7 @@
       &:hover,
       &:focus {
         background-color: $wp-bg;
-        .product-page__pagination-icon {
+        .product-grid__pagination-icon {
           path {
             fill: #fff;
           }
@@ -3319,7 +3441,7 @@
       margin-left: 16px;
       background-color: $wp-bg;
 
-      .product-page__pagination-icon {
+      .product-grid__pagination-icon {
         path {
           fill: #fff;
         }
@@ -3350,41 +3472,16 @@
     }
   }
 
-  &__box {
-    display: none;
-    margin-bottom: 17px;
-  }
-
-  &__listcard {
-    display: flex;
-    max-width: 100%;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
-    border-radius: 4px;
-    background-color: #fff;
-    padding: 0;
-    margin-bottom: 30px;
-  }
-
-  &__listcard-img {
-    display: block;
-    min-width: 230px;
-    max-height: 210px;
-    object-fit: cover;
-    border-radius: 4px 0 0 4px;
-  }
-
   &__listcard-box {
     position: relative;
-    & + & {
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 1px;
-        height: 151px;
-        background-color: #ececec;
-      }
+    display: none;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 1px;
+      height: 151px;
+      background-color: #ececec;
     }
 
     &--info {
@@ -3509,12 +3606,33 @@
   }
 }
 
-.product-page__box.list {
-  display: block;
-}
+// .product-grid__box.list {
+//   display: block;
+// }
 
-.product-page__card.list {
-  display: none;
+.product-grid__card.list {
+  max-width: 100%;
+  width: 100%;
+  min-height: 210px;
+  display: flex;
+  .product-grid__img {
+    float: left;
+    min-width: 230px;
+    width: 100%;
+    min-height: 210px;
+  }
+
+  .product-grid__card-info {
+    display: none;
+  }
+
+  .product-grid__listcard-box {
+    display: block;
+  }
+
+  .product-grid__buy {
+    display: none;
+  }
 }
 // end category-page
 
@@ -4326,14 +4444,23 @@
     display: block;
     max-width: 190px;
     width: 100%;
-    padding: 17px 0 17px;
+    padding: 16px 0 16px;
     margin-bottom: 40px;
     text-align: center;
-    border: none;
+    border: 1px solid transparent;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     color: #fff;
     background-color: $btn;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: $btn;
+      border: 1px solid $btn;
+    }
   }
 
   &__lost,
@@ -4341,8 +4468,18 @@
     display: inline-block;
     font-size: 16px;
     color: #898f96;
+    cursor: pointer;
+    transition: color .5s;
+    
     &--color-blue {
       color: $btn;
+    }
+
+    &:hover,
+    &:focus {
+      .login__registration--color-blue {
+        color: $wp-bg;
+      }
     }
   }
 
@@ -4945,7 +5082,7 @@
 .how-works {
   &__list {
     position: relative;
-  
+
     padding: 98px 0 100px;
     &--bg-white {
       background-color: #fff;
@@ -5018,13 +5155,471 @@
   }
 }
 // end how-works
+// start blog-page
+.blog-page {
+  padding: 68px 0 120px;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__inner {
+    max-width: 750px;
+    width: 100%;
+    margin-right: 30px;
+  }
+
+  &__card {
+    width: 100%;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      .blog-page__img {
+        opacity: 0.5;
+      }
+      .blog-page__title {
+        color: $wp-bg;
+      }
+    }
+  }
+
+  &__img {
+    min-width: 750px;
+    width: 100%;
+    max-height: 430px;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+    transition: opacity 0.5s;
+  }
+
+  &__card-head {
+    padding: 31px 61px 29px 29px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  &__title {
+    padding: 0 0 0 3px;
+    font-size: 30px;
+    font-weight: 500;
+    color: $btn;
+    transition: color 0.5s;
+  }
+
+  &__card-item {
+    display: flex;
+    margin: 21px 0 0;
+    padding: 0 0 0 4px;
+  }
+
+  &__card-list {
+    font-size: 15px;
+    color: #898f96;
+    font-family: "Quicksand", sans-serif !important;
+    font-weight: 400 !important;
+
+    &::before {
+      padding-right: 5px;
+      font-family: "Linearicons-Free";
+      font-size: 15px;
+      color: #898f96;
+    }
+
+    &--link {
+      color: $btn;
+    }
+
+    & + & {
+      margin-left: 30px;
+    }
+  }
+
+  &__card-info {
+    padding: 22px 31px 40px;
+  }
+
+  &__card-descr {
+    max-width: 686px;
+    width: 100%;
+    max-height: 150px;
+    overflow: auto;
+    margin: 0 0 23px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $descr;
+  }
+
+  &__more {
+    display: block;
+    max-width: 140px;
+    width: 100%;
+    padding: 12px 5px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 22px;
+    border: 1px solid transparent;
+    background-color: $btn;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: $btn;
+      border: 1px solid $btn;
+    }
+  }
+
+  &__aside {
+    max-width: 360px;
+    width: 100%;
+  }
+
+  &__box {
+    width: 100%;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+    border-radius: 4px;
+    background-color: #fff;
+
+    &--search {
+      padding: 27px 0 40px;
+    }
+
+    &--posts {
+      padding: 26px 0 1px;
+    }
+
+    &--categories {
+      padding-top: 26px;
+    }
+
+    &--tag {
+      padding: 26px 0 3px;
+    }
+
+    &--banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-height: 270px;
+      height: 100%;
+      border-radius: 4px;
+      background-image: linear-gradient(to left, #002ed9 0%, #a900da 100%);
+      opacity: 0.8;
+    }
+  }
+
+  &__head {
+    padding: 0 27px 27px;
+    border-bottom: 1px solid #e8ebf0;
+
+    &--posts {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 40px;
+    }
+  }
+
+  &__aside-title {
+    font-size: 20px;
+    color: #000000;
+  }
+
+  &__form {
+    padding: 30px 25px 0 25px;
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 13px 20px 14px;
+    font-size: 15px;
+    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+    border-radius: 23px;
+    border: 1px solid #d9dfe5;
+    background-color: #fff;
+    color: #898f96;
+  }
+
+  &__form-btn {
+    position: absolute;
+    bottom: 0;
+    right: 22px;
+    max-width: 70px;
+    padding: 13px 0;
+    width: 100%;
+    border-radius: 23px;
+    border: 1px solid transparent;
+    background-color: $btn;
+    cursor: pointer;
+    transition: background-color 0.5s, border 0.5s;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      border: 1px solid $btn;
+
+      .blog-page__form-icon {
+        path {
+          fill: $btn;
+        }
+      }
+    }
+  }
+
+  &__form-icon {
+    width: 16px;
+    height: 16px;
+    path {
+      transition: fill 0.5s;
+      fill: #fff;
+    }
+  }
+
+  &__head-link {
+    font-size: 20px;
+    color: #000;
+    transition: color 0.5s;
+
+    &--active,
+    &:hover,
+    &:focus {
+      color: $btn;
+    }
+  }
+
+  &__box-inner {
+    margin-top: 20px;
+    padding: 0 25px 0 29px;
+  }
+
+  &__post {
+    padding-bottom: 18px;
+    margin-bottom: 19px;
+    border-bottom: 1px solid #e8ebf0;
+    min-height: 91px;
+
+    &:hover,
+    &:focus {
+      .blog-page__post-title {
+        color: $btn;
+      }
+    }
+  }
+
+  &__post-img {
+    float: left;
+    margin-right: 15px;
+    max-width: 70px;
+    width: 100%;
+    max-height: 70px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__post-title {
+    position: relative;
+    top: -5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $text;
+    cursor: pointer;
+    transition: color 0.5s;
+  }
+
+  &__post-time {
+    font-size: 15px;
+    color: #898f96;
+    &::before {
+      content: "\e864";
+      margin-right: 10px;
+      font-family: "Linearicons-Free";
+      font-size: 15px;
+      color: #898f96;
+    }
+  }
+
+  &__aside-item {
+    margin: 0;
+    padding: 23px 31px 21px 25px;
+  }
+
+  &__aside-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__aside-link {
+    padding-bottom: 18px;
+    font-size: 16px;
+    color: #555555;
+    transition: color 0.5s;
+
+    &::before {
+      content: "\e876";
+      padding-right: 8px;
+      font-family: "Linearicons-Free";
+      font-size: 10px;
+      color: #747b86;
+    }
+
+    &--active,
+    &:hover,
+    &:focus {
+      color: $btn;
+      &::before {
+        color: $btn;
+      }
+    }
+  }
+
+  &__aside-num {
+    margin-top: 2px;
+    font-size: 16px;
+    color: $color-t;
+  }
+
+  &__tags {
+    padding: 29px 12px 29px 27px;
+  }
+
+  &__tags-link {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 15px;
+    font-size: 15px;
+    color: $btn;
+    background-color: rgba($btn, 0.07);
+    transition: color 0.5s, background-color 0.5s;
+    margin-bottom: 10px;
+    margin-right: 6px;
+
+    &:nth-child(3n) {
+      margin-left: 0;
+    }
+
+    &--active,
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: $btn;
+    }
+  }
+
+  &__banner {
+    position: relative;
+    top: -2px;
+    font-size: 36px;
+    color: rgba(#f9f9f9, 0.6);
+
+    &--size {
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      margin-top: 2px;
+    }
+  }
+
+  &__pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+  }
+
+  &__pagination-inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 397px;
+    width: 100%;
+    padding: 0 40px 0 0px;
+    margin: 0;
+  }
+
+  &__pagination-link {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 19px;
+    width: 50px;
+    min-height: 38px;
+    color: #747b86;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #fff;
+
+    &--arrow {
+      padding: 13px 17px;
+      margin-right: 18px;
+      transition: background-color 0.5s;
+
+      &:hover,
+      &:focus {
+        background-color: $wp-bg;
+        .blog-page__pagination-icon {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+
+    &--active {
+      margin-right: 0;
+      margin-left: 16px;
+      background-color: $wp-bg;
+
+      .blog-page__pagination-icon {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+
+    &--activ-link {
+      background-color: $btn;
+      color: #fff;
+    }
+  }
+
+  &__pagination-icon {
+    width: 16px;
+    height: 12px;
+    path {
+      transition: fill 0.5s;
+      fill: #000;
+    }
+  }
+
+  .number {
+    transition: background-color 0.5s, color 0.5s;
+    &:hover,
+    &:focus {
+      background-color: $btn;
+      color: #fff;
+    }
+  }
+}
+
+// end blog-page
 // scrolbar
 
 .followers-slider__info,
 .product__cart-info,
 .feedback__row-descr,
 .blog__card-info,
-.product-slider__info {
+.product-slider__info,
+.blog-page__card-descr,
+.product-grid__card-info {
   &::-webkit-scrollbar {
     width: 5px;
     height: 0;

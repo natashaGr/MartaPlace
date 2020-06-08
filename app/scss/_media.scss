@@ -30,7 +30,125 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .header {
+    &__dropdown-wrapper {
+      min-width: 1000px;
+      right: 20px;
+    }
+  }
+  
+  .product-grid {
+    &__card-title {
+      font-size: 15px;
+    }
+
+    &__blackout-btn {
+      padding: 11px 10px;
+    }
+  }
+
+  .footer {
+    padding-top: 60px;
+    &__content {
+      padding-bottom: 17px;
+    }
+    &__row {
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer {
+    padding-top: 50px;
+
+    &__inner {
+      flex-wrap: wrap;
+    }
+
+    &__content {
+      padding-bottom: 12px;
+    }
+
+    &__row {
+      &--social {
+        max-width: 100%;
+        margin: 30px auto;
+        text-align: center;
+        border-top: 1px solid #ececec;
+      }
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__form {
+      max-width: calc(100% - 200px);
+      margin: 0 auto;
+    }
+
+    &__social {
+      justify-content: center;
+    }
+  }
+
+  .followers-slider {
+    &__inner {
+      margin-left: 10px;
+    }
+  }
+
+  .choose-people__inner {
+    margin: 0 60px;
+  }
+
+  .blog {
+    &__inner {
+      flex-wrap: wrap;
+      margin: 0 80px;
+    }
+
+    &__card {
+      margin-bottom: 20px;
+    }
+  }
+
+  .product-grid {
+    &__card {
+      max-width: calc(100% / 2 - 20px);
+      margin-right: 20px;
+      width: 100%;
+    }
+
+    &__img {
+      min-width: 100%;
+    }
+
+    &__listcard-title {
+      margin-bottom: 15px;
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    &__listcard-box {
+      &--info {
+        padding: 24px 10px 6px 10px;
+      }
+
+      &--user {
+        padding: 29px 9px 6px 19px;
+      }
+    }
+
+    &__listcard-descr {
+      font-size: 14px;
+      line-height: 15px;
+      color: #555555;
+    }
+  }
+}
+
+@media (max-width: 800px) {
   .header {
     &__top-inner {
       margin-bottom: 20px;
@@ -253,11 +371,16 @@
     }
 
     &__cart-img {
-      min-width: 100%;
+      max-width: 100%;
     }
 
     &__cart-info {
       padding: 25px 19px 25px;
+      height: 260px;
+    }
+
+    &__cart-title {
+      font-size: 18px;
     }
 
     &__buy {
@@ -292,6 +415,9 @@
 
   .choose-people {
     padding: 42px 0 80px;
+    &__inner {
+      margin: 0 0;
+    }
   }
 
   .sell-buy {
@@ -318,11 +444,7 @@
     padding: 62px 0;
 
     &__inner {
-      flex-wrap: wrap;
-    }
-
-    &__card {
-      margin-bottom: 20px;
+      margin: 0 0;
     }
   }
 
@@ -344,40 +466,6 @@
 
   .banner {
     padding: 60px 0 65px;
-  }
-
-  .footer {
-    padding-top: 50px;
-
-    &__inner {
-      flex-wrap: wrap;
-    }
-
-    &__content {
-      padding-bottom: 12px;
-    }
-
-    &__row {
-      &--social {
-        max-width: 100%;
-        margin: 30px auto;
-        text-align: center;
-        border-top: 1px solid #ececec;
-      }
-    }
-
-    &__title {
-      margin-bottom: 24px;
-    }
-
-    &__form {
-      max-width: calc(100% - 200px);
-      margin: 0 auto;
-    }
-
-    &__social {
-      justify-content: center;
-    }
   }
 
   .filter-bar {
@@ -406,10 +494,11 @@
     }
   }
 
-  .product-page {
+  .product-grid {
     &__wrapper {
       flex-wrap: wrap;
       padding: 50px 0 120px;
+      position: relative;
     }
 
     &__filter {
@@ -422,7 +511,17 @@
       margin-right: 0;
     }
 
+    &__filter-btn {
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 30px;
+      top: -56px;
+      right: 48px;
+    }
+
     &__filter-box {
+      display: none;
       max-width: calc(100% / 2 - 40px);
       width: 100%;
       margin-left: 40px;
@@ -625,6 +724,12 @@
     &__title {
       margin-top: 0;
     }
+  }
+}
+
+@media (max-width: 640px) {
+  .followers-slider {
+    display: none;
   }
 }
 
@@ -960,7 +1065,7 @@
     }
   }
 
-  .product-page {
+  .product-grid {
     &__filter {
       margin-left: 0;
     }
@@ -989,17 +1094,21 @@
       justify-content: flex-start;
     }
 
-    &__pagination-inner {
+    &__pagination-list {
       max-width: 100%;
       justify-content: center;
       padding-left: 0;
       padding-right: 0;
     }
 
-    &__pagination-list {
+    &__pagination-inner {
       &--num {
         display: none;
       }
+    }
+
+    &__filter-btn {
+      right: 17px;
     }
   }
 
@@ -1400,6 +1509,12 @@
     }
   }
 
+  .product-grid {
+    &__filter-btn {
+      right: 0;
+    }
+  }
+
   .price {
     &__title {
       margin-bottom: 10px;
@@ -1415,8 +1530,12 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 801px) {
   .header__menu-item {
     display: flex !important;
+  }
+
+  .product-grid__filter-box {
+    display: block !important;
   }
 }
