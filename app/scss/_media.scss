@@ -594,11 +594,12 @@
 
     &__filter-btn {
       position: absolute;
+      z-index: 10;
       display: block;
       width: 30px;
       height: 30px;
-      top: -56px;
-      right: 48px;
+      top: -72px;
+      left: 48px;
     }
 
     &__filter-box {
