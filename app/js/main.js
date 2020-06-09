@@ -164,6 +164,18 @@ $(function () {
         $('.filter-bar__icon--grid').removeClass('filter-bar__icon--active');
     });
 
+    $('.filter-bar__icon--grid').on('click', function () {
+        $('.product__cart').removeClass('list');
+        $('.filter-bar__icon--grid').addClass('filter-bar__icon--active');
+        $('.filter-bar__icon--list').removeClass('filter-bar__icon--active');
+    });
+
+    $('.filter-bar__icon--list').on('click', function () {
+        $('.product__cart').addClass('list');
+        $('.filter-bar__icon--list').addClass('filter-bar__icon--active');
+        $('.filter-bar__icon--grid').removeClass('filter-bar__icon--active');
+    });
+
     $('.header__burger').click(function () {
         $(this).toggleClass('open');
         $('.header__menu-item').slideToggle();
@@ -226,7 +238,7 @@ $(function () {
 $(function () {
     $('.single-product__tab .single-product__info').on('click', function (event) {
         var id = $(this).attr('data-id');
-        $('.single-product__tab').find('.single-product__tab-item').removeClass('active-tab').hide();
+        $('.single-product__tab').find('.single-product__tab-wrapper').removeClass('active-tab').hide();
         $('.single-product__tab .single-product__tabs').find('.single-product__info').removeClass('active');
         $(this).addClass('active');
         $('#' + id).addClass('active-tab').fadeIn();
