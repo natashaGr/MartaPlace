@@ -560,6 +560,12 @@
     }
   }
 
+  &__profile-item {
+    max-width: 270px;
+    width: 100%;
+    padding: 0;
+  }
+
   &__bottom {
     background-color: #fff;
   }
@@ -872,7 +878,7 @@
     }
   }
 
-  &__profile-list {
+  &__profile-item {
     margin: 0;
     padding: 21px 20px;
   }
@@ -1593,7 +1599,7 @@
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
     margin-bottom: 30px;
-    transition: all .5s;
+    transition: all 0.5s;
 
     &--favorites {
       margin-bottom: 29px;
@@ -1804,14 +1810,12 @@
       color: #fff;
     }
   }
-
-
 }
 
 .product__cart.list {
   max-width: 100%;
   width: 100%;
-  transition: all .5s;
+  transition: all 0.5s;
 
   .product__cart-img {
     max-width: 360px;
@@ -3076,7 +3080,7 @@
     outline: transparent;
     cursor: pointer;
     & + & {
-      margin-left: 39px;
+      margin-left: 35px;
     }
 
     &--active,
@@ -3091,7 +3095,7 @@
     font-size: 24px;
     font-weight: 400;
     cursor: pointer;
-    transition: color .5s;
+    transition: color 0.5s;
     &:hover,
     &:focus {
       color: $btn;
@@ -3105,7 +3109,7 @@
     font-weight: 500;
     margin-left: 5px;
     margin-right: 5px;
-    transition: color .5s;
+    transition: color 0.5s;
   }
 
   &__features {
@@ -3164,7 +3168,7 @@
     color: $descr;
     outline: transparent;
     cursor: pointer;
-    transition: color .5s;
+    transition: color 0.5s;
 
     &::before {
       content: "\e874";
@@ -3194,7 +3198,7 @@
     box-shadow: 0 5px 40px rgba(82, 85, 90, 0.2);
     border-radius: 3px;
     background-color: #ffffff;
-    transition:  visibility .5s, top .5s, opacity .5s;
+    transition: visibility 0.5s, top 0.5s, opacity 0.5s;
     &::before {
       content: "";
       position: absolute;
@@ -3218,7 +3222,7 @@
     display: inline-block;
     color: #747b86;
     font-size: 15px;
-    transition: color .5s;
+    transition: color 0.5s;
 
     &:hover,
     &:focus {
@@ -3316,9 +3320,9 @@
     box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
     border-radius: 4px;
     background-color: #ffffff;
-    margin-bottom: 29px;
+    margin-bottom: 30px;
     &--checkbox {
-      padding: 28px 28px 7px 28px;
+      padding: 28px 28px 25px 28px;
     }
     &--range {
       padding: 26px 28px 14px 28px;
@@ -3347,7 +3351,7 @@
       font-size: 12px;
       color: $descr;
       right: 0;
-      top: 5px;
+      top: 7px;
       font-family: "Linearicons-Free";
     }
   }
@@ -3527,9 +3531,9 @@
     margin-right: -30px;
 
     &--favorites {
-     max-width: 100%;
-     margin-right: 0;
-     justify-content: space-between;
+      max-width: 100%;
+      margin-right: 0;
+      justify-content: space-between;
     }
   }
 
@@ -3538,12 +3542,12 @@
     max-width: calc(100% / 3 - 30px);
     width: 100%;
     margin-right: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
     box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
     border-radius: 4px;
     background-color: #ffffff;
     cursor: pointer;
-    transition: all .5s;
+    transition: all 0.5s;
 
     &:hover,
     &:focus {
@@ -3751,6 +3755,8 @@
   &__listcard-box {
     position: relative;
     display: none;
+    height: 210px;
+    overflow: auto;
     &::before {
       content: "";
       position: absolute;
@@ -3763,7 +3769,7 @@
     &--info {
       max-width: 259px;
       width: 100%;
-      padding: 24px 30px 6px 19px;
+      padding: 25px 30px 6px 19px;
     }
 
     &--user {
@@ -3796,8 +3802,6 @@
     font-weight: 400;
     line-height: 30px;
     color: $descr;
-    height: 60px;
-    overflow: auto;
   }
 
   &__listcard-platform {
@@ -3891,17 +3895,19 @@
   width: 100%;
   min-height: 210px;
   display: flex;
-  transition: all .5s;   
+  transition: all 0.5s;
 
   .product-grid__img {
     float: left;
     min-width: 230px;
     width: 100%;
     min-height: 210px;
+    border-radius: 4px 0px 0px 4px;
   }
 
   .product-grid__card-info {
     display: none;
+    
   }
 
   .product-grid__listcard-box {
@@ -3910,6 +3916,10 @@
 
   .product-grid__buy {
     display: none;
+  }
+
+  .product-grid__blackout-btn {
+    padding: 11px 15px;
   }
 }
 // end category-page
@@ -4632,64 +4642,114 @@
 // start login page
 .login {
   padding: 70px 0 120px;
+  margin-left: 7px;
+
+  &--register {
+    padding-bottom: 121px;
+  }
 
   &__wrapper {
-    padding: 56px 0 58px;
+    padding: 0px 0 58px;
     max-width: 555px;
     margin: 0 auto;
     box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
     border-radius: 4px;
     background-color: #ffffff;
+    cursor: pointer;
+
+    &--register {
+      padding-bottom: 59px;
+    }
+
+    &:hover,
+    &:focus {
+      .login__title,
+      .login__text,
+      .login__name {
+        color: $btn;
+      }
+      .login__input {
+        outline: 1px solid $wp-bg;
+      }
+    }
+  }
+
+  &__head {
+    padding: 55px 0 0;
+    text-align: center;
+    border-bottom: 1px solid #e8ebf0;
   }
 
   &__title {
     margin-bottom: 19px;
     font-size: 26px;
-    text-align: center;
     color: #000;
+    transition: color .5s;
+
+    &--register {
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
     padding-bottom: 30px;
-    text-align: center;
     font-size: 16px;
     color: $descr;
-    border-bottom: 1px solid #ececec;
+    transition: color .5s;
+
+    &--register {
+      padding-bottom: 24px;
+      max-width: 440px;
+      width: 100%;
+      margin: 0 auto;
+      line-height: 28px;
+    }
   }
 
   &__inner {
     margin-top: 25px;
-    padding: 0 40px 0 53px;
+    padding: 0 50px 0 50px;
   }
 
-  &__name,
-  &__password {
+  &__name {
     display: block;
     font-size: 16px;
     font-weight: 500;
     color: #000;
+    cursor: pointer;
+    transition: color .5s;
   }
 
   &__input {
     display: block;
     width: 100%;
-    margin: 10px 0 28px;
-    padding: 18px 21px;
+    margin: 13px 0 26px;
+    padding: 16px 21px;
     background-color: #f4f5f8;
     border: none;
     font-size: 16px;
     color: $btn;
+    transition: outline .5s;
+
+    &--last {
+      margin-bottom: 32px;
+    }
+
+    &--register {
+      margin-bottom: 28px;
+    }
 
     &::placeholder {
       color: #898f96;
+      transition: color .5s;
     }
   }
 
   &__box {
     position: relative;
     display: block;
-    padding-left: 32px;
-    margin-bottom: 28px;
+    padding-left: 29px;
+    margin-bottom: 30px;
     font-size: 16px;
     color: $text;
     cursor: pointer;
@@ -4711,7 +4771,7 @@
   &__castom {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -2px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -4722,9 +4782,10 @@
     display: block;
     max-width: 190px;
     width: 100%;
-    padding: 16px 0 16px;
+    padding: 15px 0 15px;
     margin-bottom: 40px;
     text-align: center;
+    text-transform: capitalize;
     border: 1px solid transparent;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
@@ -4741,7 +4802,6 @@
     }
   }
 
-  &__lost,
   &__registration {
     display: inline-block;
     font-size: 16px;
@@ -4753,16 +4813,16 @@
       color: $btn;
     }
 
+    &--lost {
+      margin-right: 25px;
+    }
+
     &:hover,
     &:focus {
       .login__registration--color-blue {
         color: $wp-bg;
       }
     }
-  }
-
-  &__lost {
-    margin-right: 27px;
   }
 }
 // end login page
@@ -5020,115 +5080,6 @@
   }
 }
 // end contact
-
-// start register
-.register {
-  padding: 70px 0 120px;
-  &__inner {
-    max-width: 555px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 0 60px;
-    box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
-    border-radius: 4px;
-    background-color: #fff;
-  }
-
-  &__head {
-    padding: 55px 0 25px;
-    margin-left: 10px;
-    text-align: center;
-    border-bottom: 1px solid #e8ebf0;
-  }
-
-  &__title {
-    margin-bottom: 14px;
-    font-size: 26px;
-    color: #000;
-  }
-
-  &__text {
-    max-width: 440px;
-    width: 100%;
-    margin: 0 auto;
-    font-size: 16px;
-    line-height: 28px;
-    color: $descr;
-  }
-
-  &__form {
-    padding: 26px 46px 0 54px;
-  }
-
-  &__form-box {
-    display: block;
-    margin-bottom: 29px;
-  }
-
-  &__form-text {
-    display: block;
-    margin-bottom: 11px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #000;
-    cursor: pointer;
-  }
-
-  &__form-input {
-    max-width: 455px;
-    width: 100%;
-    padding: 15px 21px 16px;
-    border: none;
-    background-color: #f4f5f8;
-    font-size: 16px;
-    color: $btn;
-
-    &::placeholder {
-      color: #898f96;
-    }
-  }
-
-  &__form-btn {
-    max-width: 190px;
-    width: 100%;
-    margin: 6px 0 40px;
-    padding: 16px 5px;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 500;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
-    border: 1px solid transparent;
-    background-color: $btn;
-    cursor: pointer;
-    transition: background-color 0.5s, color 0.5s, border 0.5s;
-
-    &:hover,
-    &:focus {
-      background-color: #fff;
-      color: $btn;
-      border: 1px solid $btn;
-    }
-  }
-
-  &__form-account {
-    color: #898f96;
-    font-size: 16px;
-  }
-
-  &__form-link {
-    color: $btn;
-    transition: color 0.5s;
-
-    &:hover,
-    &:focus {
-      color: $wp-bg;
-    }
-  }
-}
-
-// end register
-
 // start recover-pass
 .recover-pass {
   padding: 70px 0 121px;
@@ -5897,7 +5848,8 @@
 .blog__card-info,
 .product-slider__info,
 .blog-page__card-descr,
-.product-grid__card-info {
+.product-grid__card-info,
+.product-grid__listcard-box{
   &::-webkit-scrollbar {
     width: 5px;
     height: 0;

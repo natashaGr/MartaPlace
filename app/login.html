@@ -814,11 +814,13 @@
                 <section class="login">
                     <div class="container">
                         <div class="login__wrapper">
-                            <div class="login__title">
-                                Welcome Back
-                            </div>
-                            <div class="login__text">
-                                You can sign in with your username
+                            <div class="login__head">
+                                <div class="login__title">
+                                    Welcome Back
+                                </div>
+                                <div class="login__text">
+                                    You can sign in with your username
+                                </div>
                             </div>
                             <form class="login__inner">
                                 <label for="login__name" class="login__name">
@@ -826,10 +828,10 @@
                                 </label>
                                 <input class="login__input" id="login__name" type="text"
                                     placeholder="Enter your username...">
-                                <label class="login__password" for="login__password">
+                                <label class="login__name" for="login__password">
                                     Password
                                 </label>
-                                <input class="login__input" type="password" placeholder="Enter your password..."
+                                <input class="login__input login__input--last" type="password" placeholder="Enter your password..."
                                     id="login__password">
                                 <label class="login__box">
                                     <input class="login__checkbox" type="checkbox" checked>
@@ -837,7 +839,7 @@
                                     Remember me
                                 </label>
                                 <button class="login__btn" type="submit">Login now</button>
-                                <div class="login__lost">
+                                <div class="login__registration login__registration--lost">
                                     Lost your <a href="#" class="login__registration--color-blue">username</a>
                                     or <a href="#" class="login__registration--color-blue">password</a>?</div>
                                 <div class="login__registration">
