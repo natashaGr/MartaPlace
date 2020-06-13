@@ -1410,6 +1410,26 @@
     padding: 80px 0 120px;
   }
 
+  &--single {
+    padding: 114px 0 90px;
+  }
+
+  &__slogan {
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 53px;
+    &--blue {
+      color: $btn;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2px;
+  }
+
   &__title {
     display: flex;
     justify-content: space-between;
@@ -1605,6 +1625,12 @@
       margin-bottom: 29px;
     }
 
+    &--single {
+      max-width: 361px;
+      width: 100%;
+      margin-right: -4px;
+    }
+
     &:hover {
       .product__blackout {
         background-image: linear-gradient(to left, #0674ec 0%, #7347c1 100%);
@@ -1642,6 +1668,10 @@
     overflow: auto;
 
     &--favorites {
+      padding: 28px 30px 25px;
+    }
+
+    &--single {
       padding: 28px 30px 25px;
     }
   }
@@ -3907,7 +3937,6 @@
 
   .product-grid__card-info {
     display: none;
-    
   }
 
   .product-grid__listcard-box {
@@ -4605,42 +4634,12 @@
 }
 
 .product {
-  &--single {
-    padding: 114px 0 88px;
-  }
-
-  &__slogan {
-    text-align: center;
-    font-size: 30px;
-    color: #000;
-    margin-bottom: 50px;
-    &--blue {
-      color: $btn;
-    }
-  }
-
-  &__item {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__cart {
-    &--single {
-      max-width: 361px;
-      width: 100%;
-    }
-  }
-
-  &__cart-info {
-    &--single {
-      padding: 28px 30px 25px;
-    }
-  }
+  
 }
 
 // end single-item
 // start login page
-.login {
+.form-group {
   padding: 70px 0 120px;
   margin-left: 7px;
 
@@ -4663,14 +4662,6 @@
 
     &:hover,
     &:focus {
-      .login__title,
-      .login__text,
-      .login__name {
-        color: $btn;
-      }
-      .login__input {
-        outline: 1px solid $wp-bg;
-      }
     }
   }
 
@@ -4684,7 +4675,7 @@
     margin-bottom: 19px;
     font-size: 26px;
     color: #000;
-    transition: color .5s;
+    transition: color 0.5s;
 
     &--register {
       margin-bottom: 15px;
@@ -4695,7 +4686,7 @@
     padding-bottom: 30px;
     font-size: 16px;
     color: $descr;
-    transition: color .5s;
+    transition: color 0.5s;
 
     &--register {
       padding-bottom: 24px;
@@ -4717,7 +4708,15 @@
     font-weight: 500;
     color: #000;
     cursor: pointer;
-    transition: color .5s;
+    transition: color 0.5s;
+
+    &:hover,
+    &:focus {
+        color: $btn;
+      .form-group__input {
+        outline: 1px solid $wp-bg;
+      }
+    }
   }
 
   &__input {
@@ -4729,7 +4728,12 @@
     border: none;
     font-size: 16px;
     color: $btn;
-    transition: outline .5s;
+    transition: outline 0.5s;
+
+    &:focus,
+    &:hover {
+      outline: 1px solid $wp-bg;
+    }
 
     &--last {
       margin-bottom: 32px;
@@ -4741,7 +4745,7 @@
 
     &::placeholder {
       color: #898f96;
-      transition: color .5s;
+      transition: color 0.5s;
     }
   }
 
@@ -4759,7 +4763,7 @@
     appearance: none;
     &:checked,
     &:focus {
-      & + .login__castom {
+      & + .form-group__castom {
         width: 20px;
         height: 20px;
         background-image: url(../images/icon/check_icon.svg);
@@ -4819,7 +4823,7 @@
 
     &:hover,
     &:focus {
-      .login__registration--color-blue {
+      .form-group__registration--color-blue {
         color: $wp-bg;
       }
     }
@@ -5311,7 +5315,6 @@
 .how-works {
   &__list {
     position: relative;
-
     padding: 98px 0 100px;
     &--bg-white {
       background-color: #fff;
@@ -5324,14 +5327,18 @@
 
   &__list-item {
     display: flex;
+    &--position {
+      flex-direction: row-reverse;
+    }
   }
 
   &__list-box {
     max-width: 455px;
     width: 100%;
     margin-left: auto;
+    padding: 0 20px;
     &--position {
-      margin-left: 20px;
+      margin-left: 24px;
       margin-right: auto;
     }
   }
@@ -5450,6 +5457,7 @@
     color: #898f96;
     font-family: "Quicksand", sans-serif !important;
     font-weight: 400 !important;
+    transition: color .5s;
 
     &::before {
       padding-right: 5px;
@@ -5464,6 +5472,11 @@
 
     & + & {
       margin-left: 30px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $btn;
     }
   }
 
@@ -5505,8 +5518,29 @@
   }
 
   &__aside {
+    position: relative;
     max-width: 360px;
     width: 100%;
+  }
+
+  &__filter {
+    position: absolute;
+    top: -55px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba($btn, 0.1);
+  }
+
+  &__filter-icon {
+    width: 30px;
+    height: 30px;
+    path {
+      fill: $wp-bg;
+    }
   }
 
   &__box {
@@ -5530,17 +5564,6 @@
 
     &--tag {
       padding: 26px 0 3px;
-    }
-
-    &--banner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-height: 270px;
-      height: 100%;
-      border-radius: 4px;
-      background-image: linear-gradient(to left, #002ed9 0%, #a900da 100%);
-      opacity: 0.8;
     }
   }
 
@@ -5744,17 +5767,29 @@
   }
 
   &__banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 270px;
+    height: 100%;
+    border-radius: 4px;
+    background-image: linear-gradient(to left, #002ed9 0%, #a900da 100%);
+    opacity: 0.8;
+  }
+
+  &__slogan {
     position: relative;
     top: -2px;
     font-size: 36px;
     color: rgba(#f9f9f9, 0.6);
+  }
 
-    &--size {
-      display: block;
-      text-align: center;
-      font-size: 16px;
-      margin-top: 2px;
-    }
+  &__size {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 2px;
+    color: rgba(#f9f9f9, 0.6);
   }
 
   &__pagination {
@@ -5849,7 +5884,7 @@
 .product-slider__info,
 .blog-page__card-descr,
 .product-grid__card-info,
-.product-grid__listcard-box{
+.product-grid__listcard-box {
   &::-webkit-scrollbar {
     width: 5px;
     height: 0;
