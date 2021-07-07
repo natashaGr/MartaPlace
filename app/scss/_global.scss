@@ -1,0 +1,237 @@
+@import "vars";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-fluid {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@media (max-width: 720px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+}
+
+.title {
+  padding: 34px 27px 34px 32px;
+  font-size: 30px;
+  text-transform: capitalize;
+  box-shadow: 0 2px 4px rgba(108, 111, 115, 0.1);
+  border-radius: 4px;
+  line-height: 28px;
+  color: #000;
+  background-color: #fff;
+}
+
+.title-text {
+  text-align: center;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000;
+  &--blue {
+    color: $btn;
+  }
+}
+
+.text {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  color: $descr;
+}
+
+.user {
+  display: inline-block;
+  position: relative;
+  margin-right: 24px;
+  padding-left: 42px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #000;
+}
+
+.user-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.platform {
+  position: relative;
+  padding-left: 17px;
+  font-size: 15px;
+  background-size: 16px;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.platform-icon {
+  position: absolute;
+  top: 2px;
+  left: -7px;
+  width: 16px;
+  height: 16px;
+}
+
+.btn-buy {
+  padding: 8px 17px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 15px;
+  border: none;
+  color: $btn;
+  cursor: pointer;
+  background-color: rgba($btn, 0.1);
+}
+
+.btn-like {
+  position: relative;
+  padding: 0 0 0 22px;
+  line-height: 0;
+  font-size: 15px;
+  border: none;
+  background-color: transparent;
+  color: $descr;
+  cursor: pointer;
+  .btn-icon {
+    path {
+      fill: $wp-bg;
+    }
+  }
+}
+
+.btn-basket {
+  position: relative;
+  padding-left: 23px;
+  font-size: 15px;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  color: $btn;
+  cursor: pointer;
+  .btn-icon {
+    path {
+      fill: $btn;
+    }
+  }
+}
+
+.btn-icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 7px;
+  left: 0;
+}
+
+.dots {
+  position: relative;
+  max-width: 100px;
+  margin: 0 auto 40px;
+}
+
+.slick-dots {
+  position: absolute;
+  top: -80px;
+  padding: 0;
+  font-size: 0;
+  display: flex;
+
+  li + li {
+    margin-left: 6px;
+  }
+
+  button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: $wp-bg;
+    outline: none;
+  }
+
+  .slick-active button {
+    background-color: $btn;
+  }
+}
+
+.icon-facebook-f {
+  background-color: #395799;
+}
+
+.icon-twitter {
+  background-color: #19b2f5;
+}
+
+.icon-google1 {
+  background-color: #f05b44;
+}
+
+.icon-pinterest {
+  background-color: #9c0c1c;
+}
+
+.icon-linkedin {
+  background-color: #0da6be;
+}
+
+.icon-dribbble {
+  background-color: #ea4c89;
+}
